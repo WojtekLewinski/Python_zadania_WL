@@ -1,15 +1,15 @@
-# Zadanie 1
+"""Zadanie 1"""
 
-# cena_za_kg = float(input("Ile kosztuje kilogram ziemniaków?"))
-# print(f'Cena za pięć kilogramów ziemniaków to: {cena_za_kg*5} PLN')
+cena_za_kg = float(input("Ile kosztuje kilogram ziemniaków?"))
+print(f'Cena za pięć kilogramów ziemniaków to: {cena_za_kg*5} PLN')
 
 print("_" * 68)
 
 """wersja_2"""
 
-# cena_kg = float(input("Ile kosztuje kilogram ziemniaków?"))
-# ile_kupic = float(input("Ile kilogramów chcesz kupić?"))
-# print(f'Kwota do zapłacenia to: {cena_kg * ile_kupic} PLN!')
+cena_kg = float(input("Ile kosztuje kilogram ziemniaków?"))
+ile_kupic = float(input("Ile kilogramów chcesz kupić?"))
+print(f'Kwota do zapłacenia to: {cena_kg * ile_kupic} PLN!')
 
 print("_" * 68)
 
