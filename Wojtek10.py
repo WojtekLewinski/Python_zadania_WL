@@ -14,5 +14,6 @@ while suma != liczba1 + liczba2:
     print(f'Podana przez Ciebie liczba jest błędna. Sprubuj jeszcze raz!')
     suma= int(input(f'Kolejna próba:'))
 print("Trafiłeś")
+a
 
 
