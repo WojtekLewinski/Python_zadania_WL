@@ -18,5 +18,4 @@ elif wynik > 21 and wynik <= 28:
     print(f'Dzień odbioru to: {wynik - 21}')
 elif wynik > 28 and wynik <=35:
     print(f'Dzień odbioru to: {wynik - 28}')
-    print(f'Dzień odbioru to: {wynik - 28}')
 
