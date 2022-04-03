@@ -26,3 +26,4 @@ elif cena_kg_bananow * ile_kupic_bananow > cena_kg_ziemniakow * ile_kupic_ziemni
     print("Za banany zapłaciłeś więcej niż za ziemniaki")
 else:print("Banany i ziemniaki kosztowały tyle samo")
 print(f'Kwota do zapłacenia za ziemniaki i banany to: {Kwota_do_zapłaty} PLN!')
+print(f'Kwota do zapłacenia za ziemniaki i banany to: {Kwota_do_zapłaty} PLN!')
