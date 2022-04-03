@@ -5,7 +5,7 @@ suma (nie podaje jej). Użytkownik ma odgadnąć (no, policzyć w głowie) wynik
 o wynik wielokrotnie, tak długo, aż użytkownik poda prawidłowy wynik.
 """
 
-import math
+
 import random
 liczba1 = random.randint(0, 99)
 liczba2 = random.randint(0, 99)
