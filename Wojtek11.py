@@ -4,6 +4,7 @@ Napisz program, który wczytuje liczbę całkowitą, a następnie na konsolę wy
 liniach "choinkę" ze znaków * . Np. dla parametru 3 powinno się wypisać:
 """
 
+
 poziomy = int(input(f'Podaj dodatnią liczbę całkowitą:'))
 pierwszy = 1
 for a in range(0,poziomy):
