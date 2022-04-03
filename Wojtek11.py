@@ -10,6 +10,7 @@ for a in range(0,poziomy):
     print(" " * poziomy + "*" * pierwszy)
     poziomy=poziomy-1
     pierwszy = pierwszy + 2
+    1
 
 
 
