@@ -29,4 +29,4 @@ for i in a:
         najwieksza = i
 print(f'Najniższa z podanych przeż użytkownika liczb to: {najmniejsza}')
 print(f'Najwyższa z podanych przeż użytkownika liczb to: {najwieksza}')
-
+a
