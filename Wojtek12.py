@@ -9,14 +9,13 @@ maksimum
 NIE używaj funkcji wbudowanych!
 """
 
-licznik = 0
+
 a = []
 while True:
-    licznik +=1
     c = int(input('podaj liczbę'))
-    d = input('Czy podasz kolejną liczbę T/N')
     a.append(c)
-    if licznik == 1000000 or d =='N':
+    d = input('Czy podasz kolejną liczbę T/N')
+    if d =='N':
         break
 print(f'Liczba podanych przeż użytkownika liczb to: {len(a)}')
 print(f'Suma podanych przeż użytkownika liczb to: {sum(a)}')
@@ -30,3 +29,4 @@ for i in a:
         najwieksza = i
 print(f'Najniższa z podanych przeż użytkownika liczb to: {najmniejsza}')
 print(f'Najwyższa z podanych przeż użytkownika liczb to: {najwieksza}')
+
