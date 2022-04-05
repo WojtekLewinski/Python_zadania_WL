@@ -11,7 +11,7 @@ zagadki rozwiązywać w 9-10 próbach (bo 2^10=1024).
 
 import random
 los = random.randint(1, 999)
-print(los)
+# print(los) """Dodałem tu podgląd wylosowanej liczby dla ułatwienia sprawdzania"""
 i = 0
 while i == 0:
     i = i + 1
