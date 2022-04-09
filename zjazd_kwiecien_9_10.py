@@ -38,7 +38,7 @@ dla liczb od 0 do 10 w postaci tabelki.
 #     print()
 
 
-print("_"*65, "nowe zadanie")
+print("_"*65, "nowy temat enumeration")
 
 # """ enumeracja zaczyna od 0 i wyświetla wartość """
 # temperatura = [10,15,17,-1,-5,0,2]
@@ -58,7 +58,7 @@ print("_"*65, "nowe zadanie")
 # for indeks, temperatura in enumerate(temperatura):
 #     print(f'index: {indeks}, wartość: {temperatura}')
 
-print("_"*65, "nowe zadanie")
+print("_"*65, "nowy temat operatory dostępu")
 
 # """oerator dostępu"""
 # napis= 'Ala ma kota kot ma kompiolator'
@@ -115,12 +115,72 @@ Jak poradzić sobie ze zliczaniem dużych liter?
 2. Użyć metody .lower()
 """
 
-samogloski = ['a','e','i','o','u','y']
-tekst = input('Wpisz dowolny tekst:')
-ile_samoglosek = 0
-for litera in tekst:
-    if litera in samogloski:
-        ile_samoglosek += 1
-print(f'w napisie {tekst} znajduje sie {ile_samoglosek} samogłosek')
+# samogloski = ['a','e','i','o','u','y']
+# tekst = input('Wpisz dowolny tekst:')
+# ile_samoglosek = 0
+# for litera in tekst:
+#     if litera in samogloski:
+#         ile_samoglosek += 1
+# print(f'w napisie {tekst} znajduje sie {ile_samoglosek} samogłosek')
 
 
+"""
+Napisz program zliczający liczbę znaków w podanym przez użytkownika napisie
+pomiędzy nawiasami <>. Nawiasy mogą wystąpić tylko raz.
+
+Przykład:
+Ala ma <kota>, a kot ma Alę
+4
+
+
+1. Sprawdzam liczbę < i > - powinno ich być po jednym,
+      jeżeli liczba tych nawiasów jest inna, to kończę program
+2. W pętli sprawdzam czy:
+      - mam zliczac
+      - mam przestać zliczać
+      - czy zliczanie jest włączone i wtedy zliczam
+"""
+
+# napis = input("podaj napis: ")
+# lista1 = napis.split("<")
+# lista2 = lista1[1].split('>')
+# wyraz = lista2[0]
+# liczba_znakow = 0
+# for znak in wyraz:
+#     liczba_znakow += 1
+# print(f'liczba znaków w <> wynosi: {liczba_znakow}')
+
+
+# napis = input("podaj napis: ")
+# if napis.count('<') != 1 or napis.count('>') != 1:
+#     print('wpisałeś błędne dane')
+#     exit()
+# a = napis.find('<')
+# b = napis.find('>')
+# c = b - a -1
+# if c > 0:
+#     print(c)
+# else:
+#     print('podałeś błędna kolejnośc znaków<>')
+
+
+print("_" * 65, "nowy temat słowniki")
+
+# Słowniki dic - z ang Dictionary. Słowniki mają klucz oraz wartość. /
+# Jest mutowalny wiec mozna go edytować/. Wartość może być czymkolwiek. INT, napis, lista, tupla, inny słownik./
+# Klucz nie może być listą, może być kazdą wartościąktóra jest haszowalna, posiada metodę hasz czyli posiada metodę Float, int, tupla, boolean
+
+
+slownik = {
+    'piotr' : 200,
+    'adam': 203,
+    'kasia': 187,
+    1: 555,
+}
+print(slownik)
+print(slownik['piotr'])
+print(slownik[1])
+
+
+
+print("_" * 65, "nowy temat ")
