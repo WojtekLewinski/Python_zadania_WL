@@ -25,14 +25,29 @@ dla liczb od 0 do 10 w postaci tabelki.
 #     print(zmienna_a)
 
 
-print(" "*5, end=" ")
-for a in range(0,11):
-    print(f'{a:5}', end=' ')
-print()
-print()
+# print(" "*5, end=" ")
+# for a in range(0,11):
+#     print(f'{a:5}', end=' ')
+# print()
+# print()
+#
+# for x in range(0, 11):
+#     print(f'{x:<5}',end=" ")
+#     for y in range(0,11):
+#         print(f'{x * y:5}', end=' ')
+#     print()
 
-for x in range(0, 11):
-    print(f'{x:<5}',end=" ")
-    for y in range(0,11):
-        print(f'{x * y:5}', end=' ')
-    print()
+
+# print("_"*65, "nowe zadanie")
+
+# """ enumeracja zaczyna od 0 i wyświetla wartość """
+# temperatura = [10,15,17,-1,-5,0,2]
+# for temperatura in enumerate(temperatura):
+#     print(f'index: {temperatura[0]}, wartość: {temperatura[1]}')
+
+"""mozna przypisywać wartości bezpośrednio do tupli lub listy. przykład poniżej.
+ Liczba zmiennych i liczba elementów musi być taka sama inaczej dostajemy błąd"""
+imie,nazwisko,wiek= ('Wojciech','Lewinski', '45')
+print(imie)
+print(nazwisko)
+print(wiek)
