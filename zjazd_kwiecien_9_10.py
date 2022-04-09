@@ -47,7 +47,26 @@ dla liczb od 0 do 10 w postaci tabelki.
 
 """mozna przypisywać wartości bezpośrednio do tupli lub listy. przykład poniżej.
  Liczba zmiennych i liczba elementów musi być taka sama inaczej dostajemy błąd"""
-imie,nazwisko,wiek= ('Wojciech','Lewinski', '45')
-print(imie)
-print(nazwisko)
-print(wiek)
+# imie,nazwisko,wiek= ('Wojciech','Lewinski', '45')
+# print(imie)
+# print(nazwisko)
+# print(wiek)
+
+
+# """wykorzytanie rozpakowania na poprzednim przykładzie temperatur"""
+# temperatura = [10,15,17,-1,-5,0,2]
+# for indeks, temperatura in enumerate(temperatura):
+#     print(f'index: {indeks}, wartość: {temperatura}')
+
+print("_"*65, "nowe zadanie")
+
+"""oerator dostępu"""
+napis= 'Ala ma kota kot ma kompiolator'
+print(napis)
+print(napis[0:10])
+print(napis[0:10:2])#co drugi znak od 0 do 10
+print(napis[::-1]) # od tyłu i przydaje siędo sprawdzenia czy zdanei jest palindromem
+print(napis.upper())# wielkie litery
+print(napis.lower())# małe liter
+print(napis.capitalize())# zmienia pierwszą literę na wielką a wszystkie pozostałe na małe.
+# jeżeli w zdaniu jest kropka od nowego zdania nie zmienia na wwielkie
