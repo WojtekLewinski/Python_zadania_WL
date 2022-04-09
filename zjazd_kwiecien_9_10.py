@@ -170,17 +170,55 @@ print("_" * 65, "nowy temat słowniki")
 # Jest mutowalny wiec mozna go edytować/. Wartość może być czymkolwiek. INT, napis, lista, tupla, inny słownik./
 # Klucz nie może być listą, może być kazdą wartościąktóra jest haszowalna, posiada metodę hasz czyli posiada metodę Float, int, tupla, boolean
 
+#
+# slownik = {
+#     'piotr' : 200,
+#     'adam': 203,
+#     'kasia': 187,
+#     1: 555,
+# }
+# print(slownik)
+# print(slownik['piotr'])
+# print(slownik[1])
+# print(slownik.get("krystyna"))
+# print(slownik.keys()) # zwraca listę wszystkich kluczy ze słownika
+# print(slownik.values())# zwraca listę wszystkich wartości ze słownika
+# print(slownik.items())# otrzymujemy listę tupli z dwoma wartościami pierwsza to klucz druga to wartość
+# print(list(slownik.items())[1][1])
 
-slownik = {
-    'piotr' : 200,
-    'adam': 203,
-    'kasia': 187,
-    1: 555,
+
+
+print("_" * 65, "zadanie ze słowników ")
+"""
+Napisz program wyliczający kwotę należną za zakupiony towar
+na podstawie podanej przez użytkownika wagi i nazwy produktu.
+Do przechowywania informacji o cenie za kilogram
+danego produktu użyj słownika.
+Wypisz wszystkie dostępne produkty w sklepie.
+
+
+1. Robimy słownik z produktami, dodajmy:
+      ziemniaki 1.2
+      pomidory 4.5
+      marchew 0.5
+2. Wyświetlam słownik
+3. Pytam użytkownika o produkt i sprawadzam czy jest w produktach
+4. Wczytujemy ile kg uzytkownik chce kupic
+5. Liczymy należnosc
+"""
+
+produkty = {
+    'ziemniaki': 1.2,
+    'pomidory': 4.5,
+    'marchew': 0.5,
 }
-print(slownik)
-print(slownik['piotr'])
-print(slownik[1])
-
-
-
-print("_" * 65, "nowy temat ")
+print('Lista produktów:')
+for produkt, cena in produkty.items():
+    print(f'{produkt} - {cena:.2f} zł/kg')
+produkt = input('podaj nazwę produktu')
+if produkt not in produkty:
+    print('brak takiego towaru')
+    exit()
+cena = float(input('podaj ilość w kilogramach:'))
+kwota = produkty[produkt] * cena
+print(f'za {cena} kg produktu {produkt} zapłacisz {kwota} PLN')
