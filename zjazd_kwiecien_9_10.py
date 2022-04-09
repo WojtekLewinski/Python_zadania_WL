@@ -267,8 +267,8 @@ print("_" * 65, "zbiory")
 #     print(element)
 
 
-a = {1,2,3,4}
-b = {1,2,3,5}
+# a = {1,2,3,4}
+# b = {1,2,3,5}
 
 # suma dwóch zbiorów (łączenie)
 # print(a.union(b))
@@ -290,6 +290,71 @@ b = {1,2,3,5}
 # print(a.isdisjoint(b))
 # print(not bool(a&b))
 
-print(a <= b) # sprawdzenie czy a jest podzbiorem b
-print(a >= b) # sprawdzenie czy a jest podzbiorem b
-print(a == b) # sprawdzenie czy a jest podzbiorem b
+# print(a <= b) # sprawdzenie czy a jest podzbiorem b
+# print(a >= b) # sprawdzenie czy a jest podzbiorem b
+# print(a == b) # sprawdzenie czy a jest podzbiorem b
+
+
+"""
+Napisz program zliczający liczbę unikalnych liczb wprowadzonych przez użytkownika.
+Sprawdź jak dużo z tych liczb jest liczbami parzystymi
+w zakresie 0-100 - w tym celu skorzystaj z operatora iloczynu.
+
+
+
+
+
+1 czesc - ile unikalnych liczb uzytkownik wprowadzil
+w petli (while) wczytujemy dane do zbioru, koniec przerywa petle
+po petli pokazujemy ile unikalnych liczb zostalo wczytanych i jakie to byly
+
+2 czesc - ile wprowadzonych liczb bylo parzystych w zakresie od 0 do 100
+trzeba sobie zrobic zbior liczb parzystych - mozna uzyc petli for i funkcji range(0, 101, 2)
+robimy iloczyn teoriomnogosciowy na dwoch zbiorach, zeby pokazac ktore wprowadzone, byly parzyste
+"""
+
+# i=0
+# zbior_parzyste = set()
+# zbior_nieparzyste = set()
+# while i >= 0:
+#     liczba = float(input('podaj dowolną liczbę w zakresie od 1 do 100. jesli nie chcesz pokawać kolejnych wpisz 000: '))
+#     if liczba == 000:
+#         break
+#     elif liczba % 2 == 0:
+#         zbior_parzyste.add(liczba)
+#         i = i +1
+#     elif liczba % 2 != 0:
+#         zbior_nieparzyste.add(liczba)
+#         i= i+1
+# print(f'ilość wprowadzonych liczb parzystych{len(zbior_parzyste)}')
+# print(f'ilość wprowadzonych liczb nieparzytych {len(zbior_nieparzyste)}')
+# print(f'ilość wszystkich liczb {len(zbior_parzyste|zbior_nieparzyste)}')
+# print(i)
+
+print("_" * 65, "list comprehension")
+# comprehensions (wyrażaniea )mają 3 rodzaje
+# (list - listowe )
+
+# takie same wyrażenia na 2 sposoby
+wynik = []
+for liczba in range(0,11):
+    wynik.append(liczba)
+print(wynik)
+
+wynik = [liczba*2 for liczba in range(0,11)]
+print(wynik)
+
+# takie same wyrażenia na 2 sposoby
+
+wynik = []
+for liczba in range(0,11):
+    if liczba %2==0:
+        wynik.append(liczba *2 )
+    else:
+        wynik.append(liczba)
+print(wynik)
+
+wynik = [liczba*2 if liczba %2 ==0 else liczba for liczba in range(0,11)]
+print(wynik)
+
+# dict
