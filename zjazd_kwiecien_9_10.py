@@ -331,30 +331,51 @@ robimy iloczyn teoriomnogosciowy na dwoch zbiorach, zeby pokazac ktore wprowadzo
 # print(f'ilość wszystkich liczb {len(zbior_parzyste|zbior_nieparzyste)}')
 # print(i)
 
-print("_" * 65, "list comprehension")
-# comprehensions (wyrażaniea )mają 3 rodzaje
-# (list - listowe )
+# print("_" * 65, "list comprehension")
+# # comprehensions (wyrażaniea )mają 3 rodzaje
+# # (list - listowe )
+#
+# # takie same wyrażenia na 2 sposoby
+# # wynik = []
+# # for liczba in range(0,11):
+# #     wynik.append(liczba)
+# # print(wynik)
+# #
+# # wynik = [liczba*2 for liczba in range(0,11)]
+# # print(wynik)
+# #
+# # # takie same wyrażenia na 2 sposoby
+# #
+# # wynik = []
+# # for liczba in range(0,11):
+# #     if liczba %2==0:
+# #         wynik.append(liczba *2 )
+# #     else:
+# #         wynik.append(liczba)
+# # print(wynik)
+# #
+# # wynik = [liczba*2 if liczba %2 ==0 else liczba for liczba in range(0,11)]
+# # print(wynik)
+#
+#
+# print("_" * 65, "set comprehension")
+#
+#
+# literki = {litera for litera in "Ala ma kota"}
+# print(literki)
+# print(type(literki))
 
-# takie same wyrażenia na 2 sposoby
-wynik = []
-for liczba in range(0,11):
-    wynik.append(liczba)
-print(wynik)
 
-wynik = [liczba*2 for liczba in range(0,11)]
-print(wynik)
+print("_" * 65, "dict comprehension")
 
-# takie same wyrażenia na 2 sposoby
+# napis = "Ala ma kota"
+# wystapienia = {litera: napis.count(litera) for litera in napis}
+# print(wystapienia)
 
-wynik = []
-for liczba in range(0,11):
-    if liczba %2==0:
-        wynik.append(liczba *2 )
-    else:
-        wynik.append(liczba)
-print(wynik)
+#funkcja zip łączy dwie listy
 
-wynik = [liczba*2 if liczba %2 ==0 else liczba for liczba in range(0,11)]
-print(wynik)
-
-# dict
+imiona = ['piotr','kamil', 'asia']
+wynagrodzenie = [10,20,30,40]
+wynik_zip = zip(imiona,wynagrodzenie)
+wynik_zip= list(wynik_zip)
+print(wynik_zip)
