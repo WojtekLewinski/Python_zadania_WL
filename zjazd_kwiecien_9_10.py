@@ -207,18 +207,50 @@ Wypisz wszystkie dostępne produkty w sklepie.
 5. Liczymy należnosc
 """
 
-produkty = {
-    'ziemniaki': 1.2,
-    'pomidory': 4.5,
-    'marchew': 0.5,
-}
-print('Lista produktów:')
-for produkt, cena in produkty.items():
-    print(f'{produkt} - {cena:.2f} zł/kg')
-produkt = input('podaj nazwę produktu')
-if produkt not in produkty:
-    print('brak takiego towaru')
-    exit()
-cena = float(input('podaj ilość w kilogramach:'))
-kwota = produkty[produkt] * cena
-print(f'za {cena} kg produktu {produkt} zapłacisz {kwota} PLN')
+# produkty = {
+#     'ziemniaki': 1.2,
+#     'pomidory': 4.5,
+#     'marchew': 0.5,
+# }
+# print('Lista produktów:')
+# for produkt, cena in produkty.items():
+#     print(f'{produkt} - {cena:.2f} zł/kg')
+# produkt = input('podaj nazwę produktu')
+# if produkt not in produkty:
+#     print('brak takiego towaru')
+#     exit()
+# cena = float(input('podaj ilość w kilogramach:'))
+# kwota = produkty[produkt] * cena
+# print(f'za {cena} kg produktu {produkt} zapłacisz {kwota} PLN')
+
+print("_" * 65, "zadanie ze słowników2 ")
+
+"""
+Napisz program zliczający liczbę wystąpień każdego znaku
+w podanym przez użytkownika napisie.
+
+
+1. Robimy pusty słownik, w którym będziemy zliczać litery
+2. Wczytujemy napis od użytkownika
+3. Przechodzimy przez wszystkie znaki (for)
+  3a. jesli nie ma danego znaku w slowniku to dodajemy
+  4b. jezeli jest to zwiększamy liczbe o 1
+
+
+slownik
+klucz  => wartość
+litera => liczba wystąpień (int)
+
+Trzeba sprawdzić czy dana litera wystepuje w slowniku!
+"""
+
+# tekst = input('podaj dowolny tekst')
+# wystapienie = {}
+# for litera in tekst.lower():
+#     if litera not in wystapienie:
+#         wystapienie[litera] = 1
+#     else:
+#         wystapienie[litera]+=1
+# print(wystapienie)
+
+print("_" * 65, "zbiory")
