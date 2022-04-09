@@ -254,3 +254,42 @@ Trzeba sprawdzić czy dana litera wystepuje w slowniku!
 # print(wystapienie)
 
 print("_" * 65, "zbiory")
+
+# zbiór nie jest uprządkowany i nie pozwala na wprowadzanie duplikatów
+
+# zbior = {10,10,10,20,30,52,10,85}
+# i = 1
+# while i < 10:
+#     a = input('podaj liczbę')
+#     zbior.add(a)
+#     i += 1
+# for element in zbior:
+#     print(element)
+
+
+a = {1,2,3,4}
+b = {1,2,3,5}
+
+# suma dwóch zbiorów (łączenie)
+# print(a.union(b))
+# print(a|b) # operator pipe robi dokładnie to samo
+
+# cześć wspólna dwóch zbiorów lub przecięcie dwóch zbiorów
+# print(a.intersection(b))
+# print(a&b) # operator & robi dokładnie to samo
+
+# różnica dwóch zbiorów
+# print(a.difference(b))
+# print(a-b)
+#
+# # różnica symetryczna
+# print(a.symmetric_difference(b))
+# print(a^b)
+#
+# # czy zbiory sa rołączne  - brak częśći wspólnej
+# print(a.isdisjoint(b))
+# print(not bool(a&b))
+
+print(a <= b) # sprawdzenie czy a jest podzbiorem b
+print(a >= b) # sprawdzenie czy a jest podzbiorem b
+print(a == b) # sprawdzenie czy a jest podzbiorem b
