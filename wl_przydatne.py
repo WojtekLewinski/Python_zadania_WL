@@ -24,6 +24,10 @@ print(True and True)  # True, i, koniunkcja
 print(True or False)  # True, lub, alternatywa
 print(not True)  # False, przeczenie
 
+round(1.25)# zaokręglenie
+
+
+
 # KOLEKCJE
 
 liczba = 10  # pojedyncza wartosc
@@ -174,3 +178,16 @@ print('-' * 60)
 
 for liczba in range(-10, 11, 2):
     print(liczba)
+
+# """oerator dostępu"""
+# napis= 'Ala ma kota kot ma kompiolator'
+# print(napis)
+# print(napis[0:10])
+# print(napis[0:10:2])#co drugi znak od 0 do 10
+# print(napis[::-1]) # od tyłu i przydaje siędo sprawdzenia czy zdanei jest palindromem
+# print(napis.upper())# wielkie litery
+# print(napis.lower())# małe liter
+# print(napis.capitalize())# zmienia pierwszą literę na wielką a wszystkie pozostałe na małe.
+# # jeżeli w zdaniu jest kropka od nowego zdania nie zmienia na wwielkie
+# print(napis.title())# każde słowo z dużej litery
+# print(napis.split())# kroi zdanie na sekcje i możemy podać jaki znak będzie separatorem

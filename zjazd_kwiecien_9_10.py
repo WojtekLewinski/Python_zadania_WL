@@ -38,8 +38,8 @@ dla liczb od 0 do 10 w postaci tabelki.
 #     print()
 
 
-print("_"*65, "nowy temat enumeration")
-
+# print("_"*65, "nowy temat enumeration")
+#
 # """ enumeracja zaczyna od 0 i wyświetla wartość """
 # temperatura = [10,15,17,-1,-5,0,2]
 # for temperatura in enumerate(temperatura):
@@ -354,8 +354,8 @@ robimy iloczyn teoriomnogosciowy na dwoch zbiorach, zeby pokazac ktore wprowadzo
 # #         wynik.append(liczba)
 # # print(wynik)
 # #
-# # wynik = [liczba*2 if liczba %2 ==0 else liczba for liczba in range(0,11)]
-# # print(wynik)
+# wynik = [liczba*2 if liczba %2 ==0 else liczba for liczba in range(0,11)]
+# print(wynik)
 #
 #
 # print("_" * 65, "set comprehension")
@@ -404,5 +404,21 @@ Stwórz następujące struktury danych korzystając ze skróconej wersji zapisu:
     'To be or not to be': 18
 }
 """
-wynik = [liczba*0.1 for liczba in range(1,11)]
-print(wynik)
+# wynik = [liczba/10 for liczba in range(1,11)]
+# print(wynik)
+
+
+
+
+b = set(range(-10,11))
+for b in enumerate(b):
+    print(f'{b[0]},{b[0]**2},{b[0]**3}')
+
+
+
+
+
+
+
+
+
