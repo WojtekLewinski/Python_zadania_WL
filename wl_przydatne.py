@@ -191,3 +191,8 @@ for liczba in range(-10, 11, 2):
 # # jeżeli w zdaniu jest kropka od nowego zdania nie zmienia na wwielkie
 # print(napis.title())# każde słowo z dużej litery
 # print(napis.split())# kroi zdanie na sekcje i możemy podać jaki znak będzie separatorem
+
+
+#round() zaokrągla na zasadach ogólnych
+#math.floor() zaokrągla w dół
+#math.ceil() zaokrągla w górę
