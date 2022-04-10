@@ -1,4 +1,6 @@
 # operatory arytmetyczne
+import math
+
 print(10 + 3)
 print(10 - 3)
 print(10 * 3)
@@ -193,6 +195,7 @@ for liczba in range(-10, 11, 2):
 # print(napis.split())# kroi zdanie na sekcje i możemy podać jaki znak będzie separatorem
 
 
-#round() zaokrągla na zasadach ogólnych
-#math.floor() zaokrągla w dół
-#math.ceil() zaokrągla w górę
+#round(2.5) zaokrągla na zasadach ogólnych
+#math.floor(2.5) zaokrągla w dół
+#math.ceil(2.5) zaokrągla w górę
+math.sqrt(4)
