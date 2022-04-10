@@ -404,15 +404,42 @@ Stwórz następujące struktury danych korzystając ze skróconej wersji zapisu:
     'To be or not to be': 18
 }
 """
+print("_" * 65, "zad cz 1 pierwszy sposób")
+# zad cz 1 pierwszy sposób
 # wynik = [liczba/10 for liczba in range(1,11)]
 # print(wynik)
 
+# zad cz 1 drugi sposób
+# a= []
+# for liczba in range(1,10):
+#     a.append(liczba/10)
+# print(a)
+
+print("_" * 65, "zad cz 2 pierwszy sposób")
+# zad cz 2 pierwszy sposób
+# b = {(liczba,liczba **2,liczba **3)for liczba in range(-10,11)}
+# print(b)
 
 
+print("_" * 65, "zad cz 2 pierwszy sposób")
+# dane = {'a', 'Tom', 'Amy', 'To be or not to be'}
+# c = {napis: len(napis) for napis in dane}
+# print(c)
 
-b = set(range(-10,11))
-for b in enumerate(b):
-    print(f'{b[0]},{b[0]**2},{b[0]**3}')
+# zadanie cz3 drugi sposób
+# dane = {'a', 'Tom', 'Amy', 'To be or not to be'}
+# d = {}
+# for napis in dane:
+#    d[napis] = len(napis)
+# print(d)
+
+# napis = input('podaj napis:')
+# dane = napis.split(' ')
+# print(dane)
+# dlugosc = {napis: len(napis) for napis in dane}
+# print(dlugosc)
+
+
 
 
 
