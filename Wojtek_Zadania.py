@@ -810,6 +810,7 @@
 #         print(liczba)
 #
 
+print("_"*65, "Zadanie 1")
 """Zadanie 1
 Proszę za pomocą dowolnej pętli wyświetlić poniższy ciąg liczb:1234"""
 
@@ -822,7 +823,7 @@ Proszę za pomocą dowolnej pętli wyświetlić poniższy ciąg liczb:1234"""
 #     x+=1
 #     print(x)
 
-
+print("_"*65, "Zadanie 2")
 
 """Zadanie 2
 Proszę zdefiniować funkcję, która za pomocą pętli będzie generować dowolny, zadany przez użytkownika ciąg liczb.
@@ -835,6 +836,7 @@ Proszę zdefiniować funkcję, która za pomocą pętli będzie generować dowol
 #     a.append(c)
 # print(a)
 
+print("_"*65, "Zadanie 3")
 """Zadanie 3 Proszę za pomocą pętli wyświetlić ciąg liczb: 
 6
 12
@@ -852,7 +854,7 @@ Proszę zdefiniować funkcję, która za pomocą pętli będzie generować dowol
 # for num in a:
 #    print(num)
 
-
+print("_"*65, "Zadanie 4")
 """ Zadanie 4 
 Proszę za pomocą pętli wyświetlić ciąg liczb:
 0
@@ -870,6 +872,7 @@ Proszę za pomocą pętli wyświetlić ciąg liczb:
 #     z = a + z
 #     print(z)
 
+print("_"*65, "Zadanie 5")
 """
  Zadanie 5 
 Proszę za pomocą pętli wyświetlić ciąg liczb:
@@ -889,6 +892,7 @@ Proszę za pomocą pętli wyświetlić ciąg liczb:
 # for i in range(52,58):
 #     print(i)
 
+print("_"*65, "Zadanie 6")
 """ Zadanie 6 
 Proszę za pomocą pętli i instrukcji if wyświetlić następujący ciąg:
 
@@ -918,8 +922,209 @@ Znalazłem 5!
 #    for y in 'abc':
 #         print(x,y)
 
+
+print("_"*65, "Zadanie 8")
 """ Zadanie 8 
 Proszę utworzyć listę [1, 2, 3, 4, 5, 6, 7, 8] nie używając pętli, używając range().
 """
-a = list(range(1,9))
-print(a)
+# a = list(range(1,9))
+# print(a)
+
+print("_"*65, "Zadanie 9")
+"""Zadanie 9 
+Proszę utworzyć ciąg z listy utworzonej za pomocą funkcji range() tak żeby wyświetlić ciąg liczb tylko do wartości 5.
+
+Moja lisa: [1, 2, 3, 4, 5, 6, 7, 8]"""
+
+
+# for i in range(1,9):
+#     if i == 5:
+#         break
+#     print(i)
+
+
+print("_"*65, "Zadanie 10")
+""" Zadanie 10 
+Proszę utworzyć pętle while, która będzie wyświetlała ciąg liczb parzystych.
+
+4
+6
+8
+10
+12
+14
+16
+18"""
+
+# i = 2
+# while i <= 18:
+#     print(i)
+#     i = i+2
+#
+#
+# for i in range(4,19):
+#     if i % 2 == 0:
+#         print(i)
+
+print("_"*65, "Zadanie 11")
+"""Proszę za pomocą pętli for wyświetlić podaną listę. Proszę na końcu listy wyświetlić komunikat.
+
+AA
+BBB
+CCC
+DDDDD
+Lista się skończyła!"""
+
+# lista = ['AA','BBB','CCC','DDDDD']
+# for a in lista:
+#     print(a)
+# else:
+#     print("lista sie skończyła")
+
+print("_"*65, "Zadanie 12")
+""" Zadanie 12 
+Proszę znaleźć wszystkie liczby z przedziału (1,20), które dzielą się bez reszty przez 3."""
+
+# for i in range(1,21):
+#     if i % 3 == 0:
+#         print(i)
+
+print("_"*65, "Zadanie 13")
+""" Zadanie 13 
+Proszę wygenerować kod liczb od 1 do 21, ze zmianą co 5, wykorzystując pętle while.
+"""
+
+# i = 1
+# while i <=21:
+#     print(i)
+#     i = i + 5
+
+print("_"*65, "Zadanie 14")
+""" Zadanie 14 
+Proszę wygenerować ciąg liczb od 10 do 0 wykorzystując pętle while."""
+
+# i = 10
+# while i >= 0:
+#     print(i)
+#     i -=1
+
+print("_"*65, "Zadanie 15")
+""" Zadanie 15 
+Proszę za pomocą pętli while wygenerować ciąg liczb od 4 do 8. Proszę tą pętle zdefiniować, jako funkcję."""
+
+# def funkcja():
+#     i = 4
+#     while i <= 8:
+#         print(i)
+#         i= i+1
+# funkcja()
+
+print("_"*65, "Zadanie 16")
+"""Zwykle odliczanie wsteczne kojarzy nam się ze startem rakiety. 
+Proszę o wygenerowanie liczb od 10 do zera i na końcu będzie komunikat: „ Rakieta startuje!!!”."""
+
+# i = 10
+# while i >= 0:
+#     if i > 0:
+#         print(i)
+#         i= i-1
+#     else:
+#         print('Rakieta startuje!!!')
+#         break
+
+print("_"*65, "Zadanie 17")
+"""
+ Zadanie 17 
+Proszę używając pętli for, połączyć dwie listy według poniższego wzoru.
+
+lista1 = ["KKKK", "GGGG", "HHHH"]
+lista2 = ["563-12", "363-AB"]
+KKKK 563-12
+KKKK 363-AB
+-----------
+GGGG 563-12
+GGGG 363-AB
+-----------
+HHHH 563-12
+HHHH 363-AB
+-----------"""
+# zakres= []
+# lista1 = ["KKKK", "GGGG", "HHHH"]
+# lista2 = ["563-12", "363-AB"]
+# for a in lista1:
+#     for b in lista2:
+#         print(f'{a}  {b}')
+#     print("-"*10)
+
+print("_"*65, "Zadanie 18")
+""" Zadanie 18 
+Proszę napisać kod, który będzie prosił użytkownika o napisanie liter n lub c. Jeżeli użytkownik wpiszę właściwą literę,
+ program ma wygenerować komunikat: „Dziękuję!”. Jeżeli użytkownik wpisze złą literę, program ma mu zwrócić uwagę. 
+ W tym zadaniu nie trzeba tworzyć pętli."""
+
+# a = input('Podaj literę C lub N:')
+# if a == 'C' or a == 'N':
+#     print("Dziekuję")
+# else:
+#     print("błąd")
+
+# a = input('Podaj literę C lub N:')
+# while (a == 'C' or a == 'N'):
+#     print('Dziękuję')
+#     break
+# else:
+#     print('Podałeś błędną literę. Spróbuj ponownie')
+
+print("_"*65, "Zadanie 19")
+"""Poprzednie zadanie było dość radykalne dla użytkownika. Na pewno lepiej by było dać użytkownikowi drugą szansę, 
+aby mógł poprawić swój błąd. Fajnie by było, gdyby użytkownik mógł próbować wpisywać litery aż do skutku. 
+Proszę napisać kod, w którym użytkownik będzie mógł wpisywać litery aż uda mu się wpisać n albo c."""
+
+# for i in range(40):
+#     print("Proszę wcisnąć literę n lub c")
+#     d = input()
+#     if (d == "n" or d == "c"):
+#         print("Dziękuje!")
+#         break
+#     else:
+#         print("Błąd!")
+
+print("_"*65, "Zadanie 20")
+"""Proszę o wygenerowanie ciągu liczb 17,21,18 gdzie po każdej wygenerowanej liczbie będzie wstawiony komentarz:
+ „kolejna zmienna”. Proszę użyć pętli for."""
+
+# a = [17,21,18]
+# for zmienna in a:
+#     print(zmienna)
+#     print('kolejna zmienna')
+
+print("_" * 65, "Zadanie 21")
+""" Zadanie 21 
+Proszę do pętli z poprzedniego zadania dodać dodatkowo wyrażenie: „AAA”."""
+
+# a = [17,21,18]
+# for zmienna in a:
+#     print(zmienna)
+#     print('kolejna zmienna')
+#     print('AAA')
+
+print("_" * 65, "Zadanie 22")
+""" Zadanie 22 
+Proszę wygenerować następujący ciąg używając dwóch list i pętli.
+
+17
+Adrian
+Paula
+21
+Adrian
+Paula
+18
+Adrian
+Paula"""
+
+a = [17,21,18]
+b = ['Adrian','Paula']
+for i in a:
+    print(i)
+    for y in b:
+        print(y)
