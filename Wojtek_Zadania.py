@@ -1122,9 +1122,95 @@ Paula
 Adrian
 Paula"""
 
-a = [17,21,18]
-b = ['Adrian','Paula']
-for i in a:
-    print(i)
-    for y in b:
-        print(y)
+# a = [17,21,18]
+# b = ['Adrian','Paula']
+# for i in a:
+#     print(i)
+#     for y in b:
+#         print(y)
+
+print("_" * 65, "Zadanie 23")
+""" Zadanie 23 
+Proszę, używając pętli for, napisać kod, który poprosi o wpisanie trzech wartości. 
+Po wpisaniu tych wartości mają być one podsumowane"""
+
+# suma = 0
+# for i in range(3):
+#     a = float(input('Podaj dodowlna liczbę:'))
+#     suma = suma+ a
+# print(f'Suma pobranych wartości to: {suma}')
+
+print("_" * 65, "Zadanie 24")
+
+""" Zadanie 24 
+24. Proszę, używając pętli for, wyświetlić elementy połączonej listy według pokazanego wzoru.
+R = [["CA","NV","UT"], ["NJ","NY","DE"]]"""
+
+# R = [["CA","NV","UT"], ["NJ","NY","DE"]]
+# for a in R:
+#     for b in a:
+#         print(b)
+print("_" * 65, "Zadanie 25")
+""" Zadanie 25 
+Proszę, używając pętli for, napisać kod, który poprosi o wpisanie sześciu wartości. 
+Po wpisaniu tych wartości program ma podsumować ile razy wprowadzona została wartość 5."""
+
+# i = 0
+# for a in range(6):
+#     b = input('podaj liczbę z zakresu 1 do 10')
+#     if b == '5':
+#         i = i+1
+#     else:
+#         print('nie wybrałeś liczby 5')
+# print(f'Liczba 5 została wybrana {i} razy')
+
+print("_" * 65, "Zadanie 26")
+"""
+Proszę utworzyć pętlę, która będzie generowała następujący wzór.
+
+*
+**
+***
+****"""
+# a = 1
+# for i in range(4):
+#     print("*" * a )
+#     a = a +1
+
+
+print("_" * 65, "Zadanie 27")
+""" Zadanie 27 
+Używając pętli proszę napisać wyraz ”Polska” w ten sposób:"""
+
+# a = "Polska"
+# for i in a:
+#     print(i)
+
+
+
+print("_" * 65, "Zadanie 30")
+""" Zadanie 30 
+Używając pętli proszę wypisać imiona w ten sposób, aby program pokazywał ile liter ma każde imię. Funkcja zliczająca litery w wyrazie to len().Adrian 6
+Piotrek 7
+Ewa 3
+Bonifacy 8"""
+
+# a = ['Adrian','Piotrek','Ewa','Bonifacy']
+# for i in a:
+#     print(f'{i} {len(i)}')
+
+print("_" * 65, "Zadanie 31")
+""" Zadanie 31 
+Używając pętli proszę wypisać imiona tak, aby został wyświetlony ich kolejny numer na liście.
+
+0 Adrian
+1 Piotrek
+2 Ewa"""
+
+lista = ['Adrian','Piotrek','Ewa']
+for i in range(3):
+    print(i, lista[i])
+
+for i in range(1, 11):
+    if (i % 8 != 0) and (i % 3 != 0) and (i % 9 != 0):
+        print(i)
