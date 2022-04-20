@@ -5,12 +5,7 @@ print("_"*65, "Zadanie 1")
 Stwórz następujące funkcje. Niech każda z nich przyjmuje w argument do przeliczenia i
 zwraca przeliczoną wartość.
 ,
-
-6. pole_trojkata  - z trzema parametrami - oblicza pole trójkąta o podanych bokach
-z wzoru Herona.
-7. kilometry_na_mile  - przelicza odległość wyrażoną w kilometrach na mile
-8. mile_na_kilometry  - przelicza odległość wyrażoną w milach na kilometry
-Dla wybranych napisz też interaktywne programy, które pytają użytkownika o dane i wypisują
+ą
 wynik."""
 
 """1. stopy_na_metry  - przelicza odległość wyrażoną w stopach na metry,"""
@@ -75,9 +70,40 @@ def oblicz_bmi(wzrost: float, waga: float):
 oblicz_bmi(1.72,72)
 
 
+"""
+6. pole_trojkata  - z trzema parametrami - oblicza pole trójkąta o podanych bokach
+z wzoru Herona."""
+
+# skorzytałem z zadania domowgo  robionego przeze mnie na poprzednim zjezdzie. Dostosowałem je jedynie do funkcji
+
+import math
+
+def pole_trojkonta(ab: int, bc: int, ac: int):
+    Polowa_obwodu = (ab+bc+ac)/2
+    pole = math.sqrt(Polowa_obwodu * (Polowa_obwodu - ab) * (Polowa_obwodu - bc) * (Polowa_obwodu - ac))
+    if ab < (bc + ac) and bc < (ab + ac) and ac < (ab + bc) :
+        print("Z tych odcinków można zbudować trójkąt")
+    else:
+        print("Z tych odcinków nie da się zbudować trójkąta")
+    print(f'Pole trójkonta wynosi: {round(pole,2)} cm2')
+pole_trojkonta(4,5,6)
+
+"""
+7. kilometry_na_mile  - przelicza odległość wyrażoną w kilometrach na mile"""
+
+def kilometry_na_mile(kilometry: float):
+    odleglosc = round(kilometry*0.621,5)
+    print(f'Podana odległośc w kilometrach odpowiada odległości w milach, równej: {odleglosc} mili')
+
+kilometry_na_mile(1)
 
 
+"""8. mile_na_kilometry  - przelicza odległość wyrażoną w milach na kilometry"""
+def mile_na_kilometry(mile: float):
+    odleglosc = round(mile/0.621,3)
+    print(f'Podana odległośc w milach odpowiada odległości w kilometrach, równej: {odleglosc} km')
 
+mile_na_kilometry(1)
 
 print("_"*65, "Zadanie 2")
 
