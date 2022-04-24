@@ -110,11 +110,25 @@ print("_"*65, "Zadanie 2")
 """Zadanie 3.2 | MiesiąceZapytaj użytkownika o nazwę miesiąca i na tej podstawie wypisz mu ile dni na dany miesiąc.
 Logikę obliczania liczby dni wydziel do osobnej funkcji.
 Wersja A Nie przyjmuj się lutym - zwracaj zawsze jedną wartość.
-Wersja B (trudniejsza) Jeżeli użytkownik poda luty - zapytaj go o rok. Na tej podstawie
-Nauka programowania w Pythonie -
-ćwiczenia domowe
-3. Funkcje
-Zadanie 3.1 Funkcje liczbowe"""
+Wersja B (trudniejsza) Jeżeli użytkownik poda luty - zapytaj go o rok. Na tej podstawie 
+policz czy w tym roku luty był przestępny czy nie.
+"""
+
+nazwa_miesiaca = input("podaj nazwę miesiąca:")
+if nazwa_miesiaca == "Luty":
+    rok = int(input("Podaj rok, który cię interesuje"))
+    if rok %4 == 0:
+        if rok%100 == 0 and rok %400 != 0:
+            print(f'{nazwa_miesiaca} ma 28 dni')
+        else:
+            print(f'{nazwa_miesiaca} ma 29 dni')
+    else:
+        print(f'{nazwa_miesiaca} ma 28 dni')
+elif nazwa_miesiaca == "Styczeń" or nazwa_miesiaca == "Marzec" or nazwa_miesiaca == "Maj" or nazwa_miesiaca == "Liepiec" or nazwa_miesiaca == "Sierpień" or nazwa_miesiaca == "Październik" or nazwa_miesiaca == "Grudzień":
+    print(f'{nazwa_miesiaca} ma 31 dni')
+elif nazwa_miesiaca == "Kwiecień" or nazwa_miesiaca == "Czerwiec" or nazwa_miesiaca == "Wrzesień" or nazwa_miesiaca == "Listopad":
+    print(f'{nazwa_miesiaca} ma 30 dni')
+
 
 
 print("_"*65, "Zadanie 3")
