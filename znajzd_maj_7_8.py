@@ -194,9 +194,10 @@ class Produkt:
 
 
 kawa = Produkt(1,5,33)
+mleko = Produkt(1,4,7)
 kawa.wypisz_informacje()
 
-
+print(kawa.id)
 
 
 
