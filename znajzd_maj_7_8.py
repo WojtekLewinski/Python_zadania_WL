@@ -1,14 +1,14 @@
 print(f'____'*25,"Zadanie 1")
 """ napisz funkcję wykonującą silnię """
 
-def silnia(liczba: int)->int:
-    wynik = 1
-    for i in range(1, liczba + 1):
-        wynik *= i
-    return wynik
-
-
-print(f'{silnia(5) = }')
+# def silnia(liczba: int)->int:
+#     wynik = 1
+#     for i in range(1, liczba + 1):
+#         wynik *= i
+#     return wynik
+#
+#
+# print(f'{silnia(5) = }')
 
 print(f'____'*25,"funkcja rekurencyjna - zainteresuj się językami funkcyjnymi")
 
@@ -80,30 +80,30 @@ print(f'____'*25," nowy temat")
 # zwróci listę wyników funkcji `f` dla wszystkich wartości z listy
 # zaaplikuj(f, [a,b,c]) == [f(a), f(b), f(c)]
 
-def zaaplikuj(fun, lista):
-    wynik = []
-    for a in lista:
-        wynik.append(funkcja(a))
-    return wynik
-
-def funkcja(x):
-    return 'f',(x)
-
-print(zaaplikuj(funkcja, [10, 21, 30]))
-
-
-
-def zaaplikuj1(funk1,lista1):
-    wartosc = []
-    for c in lista1:
-        wartosc.append(dodawanie(c))
-    return wartosc
-
-
-def dodawanie(z):
-    return z + 10
-
-print(zaaplikuj1(dodawanie,[1,2,3]))
+# def zaaplikuj(fun, lista):
+#     wynik = []
+#     for a in lista:
+#         wynik.append(funkcja(a))
+#     return wynik
+#
+# def funkcja(x):
+#     return 'f',(x)
+#
+# print(zaaplikuj(funkcja, [10, 21, 30]))
+#
+#
+#
+# def zaaplikuj1(funk1,lista1):
+#     wartosc = []
+#     for c in lista1:
+#         wartosc.append(dodawanie(c))
+#     return wartosc
+#
+#
+# def dodawanie(z):
+#     return z + 10
+#
+# print(zaaplikuj1(dodawanie,[1,2,3]))
 
 
 
@@ -123,20 +123,20 @@ print(zaaplikuj1(dodawanie,[1,2,3]))
 
 print(f'____'*25," funkcje anonimowe")
 
-lista = [1,2,3,4,5]
-
-def kwadrat(x):
-    return x ** 2
-
-print(map(kwadrat, lista))
-print(list(map(kwadrat, lista)))
-
-print(list(map(lambda x: x + 7, lista)))
-print(list(map(lambda x: x ** 3, lista)))
-
-plus5 = lambda x: x + 5
-
-print(list(filter(lambda x: x % 2 == 0, lista)))
+# lista = [1,2,3,4,5]
+#
+# def kwadrat(x):
+#     return x ** 2
+#
+# print(map(kwadrat, lista))
+# print(list(map(kwadrat, lista)))
+#
+# print(list(map(lambda x: x + 7, lista)))
+# print(list(map(lambda x: x ** 3, lista)))
+#
+# plus5 = lambda x: x + 5
+#
+# print(list(filter(lambda x: x % 2 == 0, lista)))
 
 # (lambda x, y: print(f"{x + y = }"))(5, 10) # od razu wywołuję funkcję anonimową
 
@@ -148,15 +148,37 @@ print(list(filter(lambda x: x % 2 == 0, lista)))
 # "1,2,3,4,5" -> [1,2,3,4,5]
 
 # wersja w kilku wierszach
-napis = input('podaj napis:')
-dane = napis.split(',')
-int = []
-for s in dane:
-    int.append(s)
-print(int)
+# napis = input('podaj napis:')
+# dane = napis.split(',')
+# int = []
+# for s in dane:
+#     int.append(s)
+# print(int)
+#
+# # wersja w jednym wierszu
+# print(list(map(int, input('podaj napis:').split(',')))) # w tym przypadku funkcja map przypisuje wszystkim elementom listy wartość int
 
-# wersja w jednym wierszu
-print(list(map(int, input('podaj napis:').split(',')))) # w tym przypadku funkcja map przypisuje wszystkim elementom listy wartość int
+
+print(f'____'*25," programowanie obiektowe")
+
+# class Moja_klasa:
+#     def metoda(self,x):
+#         print(f'wywołano metodę z argumentem {x}' )
+#
+# x = Moja_klasa()# tworzy nowy obiekt typu Moja Klasa
+# print(x)
+# print(type(x))
+# x.metoda(10)
+
+class Osoba:
+    def __init__(self, imie, nazwisko):
+        self.imie = imie
+        self.nazwisko = nazwisko
+
+    def przedstaw_sie(self):
+        print(f'Cześć!Jestem  {self.imię} {self.nazwisko}')
+
+jan = Osoba("Jan", "Kowalski")
 
 
 
