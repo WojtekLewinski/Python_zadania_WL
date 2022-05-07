@@ -1,4 +1,4 @@
-Napisz program sprawdzający czy podana przez użytkownika liczba:
+"""Napisz program sprawdzający czy podana przez użytkownika liczba:
 - jest nieparzysta, podzielna przez 3 i większa od 10
 - lub jest to liczba 7.
 """
