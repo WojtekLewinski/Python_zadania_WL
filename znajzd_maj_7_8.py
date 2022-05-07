@@ -108,10 +108,6 @@ print(zaaplikuj1(dodawanie,[1,2,3]))
 
 
 
-
-
-
-
 # def kwadrat(x):
 #     return x ** 2
 #
@@ -119,10 +115,48 @@ print(zaaplikuj1(dodawanie,[1,2,3]))
 #     assert zaaplikuj(kwadrat, [1, 2, 3, 4]) == [1, 4, 9, 16]
 
 
+# lista = [1,2,3,4,5]
+# def kwadrat(x):
+#     return x ** 2
+#
+# print(list(map(kwadrat,lista)))
+
+print(f'____'*25," funkcje anonimowe")
+
+lista = [1,2,3,4,5]
+
+def kwadrat(x):
+    return x ** 2
+
+print(map(kwadrat, lista))
+print(list(map(kwadrat, lista)))
+
+print(list(map(lambda x: x + 7, lista)))
+print(list(map(lambda x: x ** 3, lista)))
+
+plus5 = lambda x: x + 5
+
+print(list(filter(lambda x: x % 2 == 0, lista)))
+
+# (lambda x, y: print(f"{x + y = }"))(5, 10) # od razu wywołuję funkcję anonimową
 
 
+#przykład
+# Przyjmij od użytkownika listę intów rozdzieloną przecinkami i zamień
+# przyjęty napis na listę intów
+# Haczyk: limit wierzy == 1
+# "1,2,3,4,5" -> [1,2,3,4,5]
 
+# wersja w kilku wierszach
+napis = input('podaj napis:')
+dane = napis.split(',')
+int = []
+for s in dane:
+    int.append(s)
+print(int)
 
+# wersja w jednym wierszu
+print(list(map(int, input('podaj napis:').split(',')))) # w tym przypadku funkcja map przypisuje wszystkim elementom listy wartość int
 
 
 
