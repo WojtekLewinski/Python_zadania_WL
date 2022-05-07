@@ -180,7 +180,7 @@ class Osoba:
 
 jan = Osoba("Jan", "Kowalski")
 
-
+print(f'____'*25," Zadanie 1")
 class Produkt:
     def __init__(self,waga, cena, id):
         self.waga = waga
@@ -188,15 +188,13 @@ class Produkt:
         self.id = id
 
     def wypisz_informacje(self):
-        print(f'Waga w kilogramach:{self.waga}')
-        print(f'Cena w PLN:{self.waga}')
-        print(f'ID produktu:{self.id}')
+        print(f'ID produktu:{self.id}, Waga w kilogramach:{self.waga}, Cena w PLN:{self.cena}')
+
 
 
 kawa = Produkt(1,5,33)
 mleko = Produkt(1,4,7)
 kawa.wypisz_informacje()
-
 print(kawa.id)
 
 
