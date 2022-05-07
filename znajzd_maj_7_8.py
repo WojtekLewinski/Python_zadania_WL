@@ -181,5 +181,24 @@ class Osoba:
 jan = Osoba("Jan", "Kowalski")
 
 
+class Produkt:
+    def __init__(self,waga, cena, id):
+        self.waga = waga
+        self.cena = cena
+        self.id = id
+
+    def wypisz_informacje(self):
+        print(f'Waga w kilogramach:{self.waga}')
+        print(f'Cena w PLN:{self.waga}')
+        print(f'ID produktu:{self.id}')
+
+
+kawa = Produkt(1,5,33)
+kawa.wypisz_informacje()
+
+
+
+
+
 
 
