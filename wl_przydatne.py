@@ -11,8 +11,25 @@
 # # jeżeli w zdaniu jest kropka od nowego zdania nie zmienia na wwielkie
 # print(napis.title())# każde słowo z dużej litery
 # print(napis.split())# kroi zdanie na sekcje i możemy podać jaki znak będzie separatorem
-
+# print(napis.count('a')) #licza wystąpienia wpisanego znaku
+# print(napis.index('a')) # podaje nr indeksu wystąpnienia pierwszej literki a./
+# # Python szuka dokładnie takiego znaku jaki wpisaliśmny więc podaj 2 - małe a występuje jako 3
 
 # map - dostaje funkcję i listę i aplikuje tę funkcę do wszystkich elementów listy
 # filter - dostaje funkcję i listę aplikuje tę funkcę do każdego elemeentu listy jeżeli funkcje zwróci true
 # lambda - funkcja anonimowa - pozwala stworzyć funkcjenie przypisując jej nazwy
+
+
+# wystapienia = {litera: napis.count(litera) for litera in napis}
+# napis = "Ala ma kota"
+# wystapienie = {}
+# for litera in napis.lower():
+#     if litera in wystapienie:
+#         wystapienie[litera] += 1
+#     else:
+#         wystapienie[litera] += 1
+#
+# print(wystapienie)
+
+
+
