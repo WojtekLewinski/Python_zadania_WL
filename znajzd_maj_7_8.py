@@ -37,18 +37,18 @@ print(f'____'*25,"Zadanie 2")
 #     return ciag_f(n - 1) + ciag_f(n-2)
 #
 # print(f'{ciag_f(9)}')
-"""dokończ w domu bo jest źle"""
+"""dokończ w domu bo jest źle_"""
 # def fib(liczba: int) ->int:
 #     wynik1 = 1
-#     zmi_1 = wynik1
-#     zmi_2 = 1
+#     zmi_1 = 0
+#     zmi_2 = 0
 #     for a in range(1,liczba):
 #         zmi_2 = wynik1 + zmi_1
-#         wynik1= zmi_2+zmi_1
-#         zmi_1 = wynik1
+#         zmi_1 = zmi_2 + wynik1
+#         wynik1 = zmi_1
 #     return wynik1
 # #
-# print(f'{fib(9)}')
+# print(f'{fib(3)}')
 
 
 print(f'____'*25,"Zadanie 3")
@@ -170,34 +170,61 @@ print(f'____'*25," programowanie obiektowe")
 # print(type(x))
 # x.metoda(10)
 
-class Osoba:
-    def __init__(self, imie, nazwisko):
+# class Osoba:
+#     def __init__(self, imie, nazwisko):
+#         self.imie = imie
+#         self.nazwisko = nazwisko
+#
+#     def przedstaw_sie(self):
+#         print(f'Cześć!Jestem  {self.imię} {self.nazwisko}')
+#
+# jan = Osoba("Jan", "Kowalski")
+#
+# print(f'____'*25," Zadanie 1 klasy")
+#
+# class Produkt:
+#     def __init__(self,waga, cena, id):
+#         self.waga = waga
+#         self.cena = cena
+#         self.id = id
+#
+#     def wypisz_informacje(self):
+#         print(f'ID produktu:{self.id}, Waga w kilogramach:{self.waga}, Cena w PLN:{self.cena}')
+#
+#
+#
+# kawa = Produkt(1,5,33)
+# mleko = Produkt(1,4,7)
+# kawa.wypisz_informacje()
+# print(kawa.id)
+
+
+print(f'____'*25," Zadanie 2")
+
+
+class Pracownik:
+    def __init__(self, imie, nazwisko, stawka,):
         self.imie = imie
         self.nazwisko = nazwisko
+        self.stawka = stawka
+        self.czas_pracy = 0
 
-    def przedstaw_sie(self):
-        print(f'Cześć!Jestem  {self.imię} {self.nazwisko}')
+    def czas_pr(self, h):
+        if h <= 8:
+            self.czas_pracy += h
+        else:
+            self.czas_pracy += 8 + (h - 8 ) *2
 
-jan = Osoba("Jan", "Kowalski")
-
-print(f'____'*25," Zadanie 1")
-class Produkt:
-    def __init__(self,waga, cena, id):
-        self.waga = waga
-        self.cena = cena
-        self.id = id
-
-    def wypisz_informacje(self):
-        print(f'ID produktu:{self.id}, Waga w kilogramach:{self.waga}, Cena w PLN:{self.cena}')
-
-
-
-kawa = Produkt(1,5,33)
-mleko = Produkt(1,4,7)
-kawa.wypisz_informacje()
-print(kawa.id)
+    def wyplata(self):
+        wynagrodzenie = self.czas_pracy*self.stawka
+        self.czas_pracy = 0
+        return wynagrodzenie
 
 
 
 
 
+jan = Pracownik("Jan","Kowalski", 100)
+jan.czas_pr(5)
+jan.czas_pr(9)
+print(jan.wyplata())
