@@ -19,8 +19,9 @@
 # filter - dostaje funkcję i listę aplikuje tę funkcę do każdego elemeentu listy jeżeli funkcje zwróci true
 # lambda - funkcja anonimowa - pozwala stworzyć funkcjenie przypisując jej nazwy
 
+napis = "Ala ma kota"
+wystapienia = {litera: napis.count(litera) for litera in napis}
 
-# wystapienia = {litera: napis.count(litera) for litera in napis}
 # napis = "Ala ma kota"
 # wystapienie = {}
 # for litera in napis.lower():
@@ -29,7 +30,7 @@
 #     else:
 #         wystapienie[litera] += 1
 #
-# print(wystapienie)
+print(wystapienie)
 
 
 

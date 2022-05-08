@@ -172,9 +172,14 @@ print(f'____' * 25, " programowanie obiektowe")
 #         self.nazwisko = nazwisko
 #
 #     def przedstaw_sie(self):
-#         print(f'Cześć!Jestem  {self.imię} {self.nazwisko}')
+#         print(f'Cześć!Jestem  {self.imie} {self.nazwisko}')
+#
 #
 # jan = Osoba("Jan", "Kowalski")
+# jan.przedstaw_sie()
+
+
+
 #
 # print(f'____'*25," Zadanie 1 klasy")
 #
@@ -214,13 +219,13 @@ print(f'____' * 25, " Zadanie 2")
 #         wynagrodzenie = self.czas_pracy*self.stawka
 #         self.czas_pracy = 0
 #         return wynagrodzenie
-##
+# #
 # jan = Pracownik("Jan","Kowalski", 100)
 # jan.czas_pr(5)
 # jan.czas_pr(9)
 # print(jan.wyplata())
-#
-#
+
+
 # def test_0():
 #     e = Pracownik("Jan", "Kowalski", 100)
 #     e.czas_pr(5)
@@ -294,7 +299,6 @@ print(f'____' * 25, " Zadanie 2 _klaca postaci")
 
 print(f'____' * 25, "  klaca produkt")
 
-
 # Zaimplementuj klasę Basket umożliwiającą dodawanie produktów w
 # określonej liczbie do koszyka. Zaimplementuj metodę obliczającą
 # całkowitą wartość koszyka oraz wypisującą informację o zawartości
@@ -311,71 +315,167 @@ print(f'____' * 25, "  klaca produkt")
 # - Woda (1), cena: 10.00 x 5\n
 # W sumie: 50.00'
 
-class Produkt:
-    def __init__(self, id, nazwa, cena):
-        self.id = id
-        self.nazwa = nazwa
-        self.cena = cena
+# class Produkt:
+#     def __init__(self, id, nazwa, cena):
+#         self.id = id
+#         self.nazwa = nazwa
+#         self.cena = cena
+#
+# class NieProdukt:
+#     def __init__(self, nazwa, cena):
+#         self.nazwa = nazwa
+#         self.cena = cena
+#
+# class Koszyk:
+#     def __init__(self):
+#         self.zawartosc = []
+#
+#     def dodaj_produkt(self, p: Produkt, ile=1):
+#         if not isinstance(p, Produkt):
+#             print("Do koszyka można wkładać tylko Produkty!")
+#             return
+#         self.zawartosc.append({"produkt": p, "ilosc": ile})
+#
+#
+#     def laczna_wartosc(self):
+#         suma = 0
+#         for prod in self.zawartosc:
+#             suma += prod["produkt"].cena*prod["ilosc"]
+#         return suma
+#
+#     def rachunek(self):
+#         print("Produkty w koszyku:")
+#         for p in self.zawartosc:
+#             print(f" - {p.nazwa}, {p.cena}")
+#         print(f"Suma: {self.laczna_wartosc()} PLN")
+#
+# woda = Produkt(1, "Woda", 10)
+# banan = Produkt(2, "Banan", 2)
+# niewoda = NieProdukt("Woda", 20)
+# k = Koszyk()
+# k.dodaj_produkt(woda)
+# k.dodaj_produkt(banan)
+# # k.dodaj_produkt(niewoda)
+# print(k.laczna_wartosc())
+#
+#
+# def test_0():
+#     woda = Produkt(1, "Woda", 10.50)
+#     bulka = Produkt(2, "Bułka", 1.75)
+#     koszyk = Koszyk()
+#     koszyk.dodaj_produkt(woda)
+#     koszyk.dodaj_produkt(bulka)
+#     assert koszyk.laczna_wartosc() == 12.25
+#
+# def test_1():
+#     woda = Produkt(1, "Woda", 10)
+#     bulka = Produkt(2, "Bułka", 1)
+#     koszyk = Koszyk()
+#     koszyk.dodaj_produkt(woda, 3)
+#     koszyk.dodaj_produkt(bulka, 2)
+#     assert koszyk.laczna_wartosc() == 32
+#
+#
+# # if __name__ == "__main__":
+# woda = Produkt(1, "Woda", 10.50)
+# bulka = Produkt(2, "Bułka", 1.75)
+# koszyk = Koszyk()
+# koszyk.dodaj_produkt(woda, 24)
+# koszyk.dodaj_produkt(bulka)
+# koszyk.rachunek()
 
-class NieProdukt:
-    def __init__(self, nazwa, cena):
-        self.nazwa = nazwa
-        self.cena = cena
-
-class Koszyk:
-    def __init__(self):
-        self.zawartosc = []
-
-    def dodaj_produkt(self, p: Produkt, ile=1):
-        if not isinstance(p, Produkt):
-            print("Do koszyka można wkładać tylko Produkty!")
-            return
-        self.zawartosc.append({"produkt": p, "ilosc": ile})
+print(f'____' * 25, "  magiczne moteody")
 
 
-    def laczna_wartosc(self):
-        suma = 0
-        for prod in self.zawartosc:
-            suma += prod["produkt"].cena*prod["ilosc"]
-        return suma
+# np __init__
 
-    def rachunek(self):
-        print("Produkty w koszyku:")
-        for p in self.zawartosc:
-            print(f" - {p.nazwa}, {p.cena}")
-        print(f"Suma: {self.laczna_wartosc()} PLN")
+# class Produkt:
+#     def __init__(self, nazwa, cena):
+#         self.nazwa = nazwa
+#         self.cena = cena
+#
+#     def __str__(self):
+#         return f'{self.nazwa}, cena: {self.cena} PLN'
+#
+#
+# p = Produkt("Woda", 12)
+# print((p.__str__()))
+# print(p)
 
-woda = Produkt(1, "Woda", 10)
-banan = Produkt(2, "Banan", 2)
-niewoda = NieProdukt("Woda", 20)
-k = Koszyk()
-k.dodaj_produkt(woda)
-k.dodaj_produkt(banan)
-# k.dodaj_produkt(niewoda)
-print(k.laczna_wartosc())
+print(f'____' * 25, "  klasa ułamek")
 
 
-def test_0():
-    woda = Produkt(1, "Woda", 10.50)
-    bulka = Produkt(2, "Bułka", 1.75)
-    koszyk = Koszyk()
-    koszyk.dodaj_produkt(woda)
-    koszyk.dodaj_produkt(bulka)
-    assert koszyk.laczna_wartosc() == 12.25
+class Ulamek:
+    def __init__(self, licznik, mianownik):
+        self.licznik = licznik
+        self.mianownik = mianownik
 
-def test_1():
-    woda = Produkt(1, "Woda", 10)
-    bulka = Produkt(2, "Bułka", 1)
-    koszyk = Koszyk()
-    koszyk.dodaj_produkt(woda, 3)
-    koszyk.dodaj_produkt(bulka, 2)
-    assert koszyk.laczna_wartosc() == 32
+    def __str__(self):
+        return f"{self.licznik}/{self.mianownik}"
+
+    def __imul__(self, other):  # a.domnoz(b) - a *= b
+        self.licznik *= other.licznik
+        self.mianownik *= other.mianownik
+        return self
+
+    def __mul__(self, other):
+        return Ulamek(self.licznik * other.licznik, self.mianownik * other.mianownik)
+
+    def dodaj(self, other):  # a.dodaj(b) - a += b
+        self.licznik = self.licznik * other.mianownik + self.mianownik * other.licznik
+        self.mianownik *= other.mianownik
 
 
-# if __name__ == "__main__":
-woda = Produkt(1, "Woda", 10.50)
-bulka = Produkt(2, "Bułka", 1.75)
-koszyk = Koszyk()
-koszyk.dodaj_produkt(woda, 24)
-koszyk.dodaj_produkt(bulka)
-koszyk.rachunek()
+a = Ulamek(1, 2)
+b = Ulamek(2, 3)
+print(a)
+c = a * a # to samo co c = a.__mul__(a)
+print(a)
+print(c)
+print(a)  # tu print() wywoła sobie a.__str__(), żeby wiedziec jak ma wyswietlic a
+# a.domnoz(b)
+a *= b # to samo co a = a.__imul__(b)
+print(a)
+a.dodaj(b)
+print(a)
+
+print(f'____' * 25, "  pola klasowe")
+
+# class MojaKlasa:
+#     POLA_KLASOWE = 100
+#
+#     def __init__(self,x):
+#         self.atrybut = x
+#
+#
+# MojaKlasa.POLA_KLASOWE = 200
+# print(f'{MojaKlasa.POLA_KLASOWE = }')
+# a = MojaKlasa(5)
+# b = MojaKlasa(10)
+#
+#
+# print(f'{a.atrybut = }')
+# print(f'{b.atrybut = }')
+# print(f'{b.POLA_KLASOWE = }')
+
+print(f'____' * 25, "  pola klasowe")
+
+class Produkt2:
+    POLE_KLASOWE = 1
+
+    def __init__(self, nazwa_produktu, cena_produktu):
+        self.nazwa_produktu = nazwa_produktu
+        self.cena_produktu = cena_produktu
+        self.nr_produktu = Produkt2.POLE_KLASOWE
+        Produkt2.POLE_KLASOWE +=1
+
+
+    def wyliczenie(self):
+        print(f'Produkt: {self.nazwa_produktu}, nr ID:{self.nr_produktu}, cena:{self.cena_produktu}')
+
+
+
+banan = Produkt2("Banan",1)
+cytryna = Produkt2("cytryna",3)
+banan.wyliczenie()
+cytryna.wyliczenie()
