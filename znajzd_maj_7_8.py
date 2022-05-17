@@ -181,23 +181,23 @@ print(f'____' * 25, " programowanie obiektowe")
 
 
 #
-# print(f'____'*25," Zadanie 1 klasy")
-#
-# class Produkt:
-#     def __init__(self,waga, cena, id):
-#         self.waga = waga
-#         self.cena = cena
-#         self.id = id
-#
-#     def wypisz_informacje(self):
-#         print(f'ID produktu:{self.id}, Waga w kilogramach:{self.waga}, Cena w PLN:{self.cena}')
-#
-#
-#
-# kawa = Produkt(1,5,33)
-# mleko = Produkt(1,4,7)
-# kawa.wypisz_informacje()
-# print(kawa.id)
+print(f'____'*25," Zadanie 1 klasy")
+
+class Produkt:
+    def __init__(self,waga, cena, id):
+        self.waga = waga
+        self.cena = cena
+        self.id = id
+
+    def wypisz_informacje(self):
+        print(f'ID produktu:{self.id}, Waga w kilogramach:{self.waga}, Cena w PLN:{self.cena}')
+
+
+
+kawa = Produkt(1,5,33)
+mleko = Produkt(1,4,7)
+kawa.wypisz_informacje()
+print(kawa.id)
 
 
 print(f'____' * 25, " Zadanie 2")
@@ -239,63 +239,63 @@ print(f'____' * 25, " Zadanie 2")
 
 print(f'____' * 25, " Zadanie 2 _klaca postaci")
 
-#
-# class Postac:
-#     def __init__(self, imie, zdrowie):
-#         self.imie = imie
-#         self.zdrowie = zdrowie
-#         self.leczenie = 0
-#         self.rany = 0
-#
-#     def wypisz(self):
-#         print(f'Bohater {self.imie} ma {(self.zdrowie - self.rany) + self.leczenie} pkt zdrowia')
-#
-#     # zmniejsza zdrowie o dmg; zdrowie nie powinno spaść poniżej 0
-#     def otrzymaj_obrazenia(self, dmg):
-#         if self.zdrowie - dmg >= 0 and self.zdrowie - dmg > 0:
-#             print(f'Bohater otrzymał {dmg} pkt obrażeń')
-#             self.rany += dmg
-#             self.zdrowie - self.rany
-#         else:
-#             print("Bohater nie żyje")
-#
-#             # przywraca `hp` utraconych punktów zdrowia;
-#             # zdrowie nie powinno przekroczyć maksymalnej wartosci
-#             # leczenie nie działa jesli postac nie zyje
-#
-#     def wylecz(self, hp):
-#         if self.zdrowie > 0 or self.zdrowie + hp <= 120:
-#             if (self.zdrowie + hp) > 120:
-#                 print(f'Bohater dostał {hp} ma teraz 120 pkt zdrowia')
-#                 self.zdrowie = 120
-#             else:
-#                 print(f'Bohater otrzymał {hp} pkt zdrowia ma teraz {self.zdrowie} pkt zdrowia')
-#         else:
-#             print(self.zdrowie)
-#
-#     # zwraca iformację, czy postać żyje
-#     def czy_zyje(self):
-#         if self.zdrowie > 0:
-#             print("Bohater żyje")
-#         else:
-#             print("Bohater nie żyje")
-#
-#
-# Gunnar = Postac("Gunnar", 120)
-# Gunnar.wypisz()  # Rufus, 120/120 HP
-# Gunnar.otrzymaj_obrazenia(15)
-# Gunnar.wypisz()  # Rufus, 105/120 HP
-# Gunnar.wylecz(2)
-# Gunnar.wypisz()  # Rufus, 108/120 HP
-# Gunnar.wylecz(7)
-# Gunnar.wypisz()  # Rufus, 120/120 HP
-# Gunnar.otrzymaj_obrazenia(150)
-# Gunnar.wypisz()  # Rufus, 0/120 HP / Rufus, nie żyje
-#
-# p = Postac("Worek treningowy", 100)
-# while p.czy_zyje():
-#     p.otrzymaj_obrazenia(7)
-#     p.wypisz()
+
+class Postac:
+    def __init__(self, imie, zdrowie):
+        self.imie = imie
+        self.zdrowie = zdrowie
+        self.leczenie = 0
+        self.rany = 0
+        self.po_obrażeniach = self.zdrowie - self.rany
+
+    def wypisz(self):
+        print(f'Bohater {self.imie} ma {(self.zdrowie - self.rany) + self.leczenie} pkt zdrowia')
+
+    # zmniejsza zdrowie o dmg; zdrowie nie powinno spaść poniżej 0
+    def otrzymaj_obrazenia(self, dmg):
+        if self.zdrowie - dmg >= 0 and self.zdrowie - dmg > 0:
+            print(f'Bohater otrzymał {dmg} pkt obrażeń')
+            self.rany += dmg
+            self.zdrowie - self.rany
+        else:
+            print("Bohater nie żyje")
+
+            # przywraca `hp` utraconych punktów zdrowia;
+            # zdrowie nie powinno przekroczyć maksymalnej wartosci
+            # leczenie nie działa jesli postac nie zyje
+
+    def wylecz(self, hp):
+        if self.zdrowie > 0 or self.zdrowie <= 120:
+            if (self.po_obrażeniach + hp) > 120:
+                print(f'Bohater dostał {hp} pkt zdrowia ma {self.po_obrażeniach}')
+            else:
+                print(f'Bohater otrzymał {hp} pkt zdrowia ma teraz {self.zdrowie + hp} pkt zdrowia')
+        else:
+            print(self.zdrowie)
+
+    # zwraca iformację, czy postać żyje
+    def czy_zyje(self):
+        if self.zdrowie > 0:
+            print("Bohater żyje")
+        else:
+            print("Bohater nie żyje")
+
+
+Gunnar = Postac("Gunnar", 120)
+Gunnar.wypisz()  # Rufus, 120/120 HP
+Gunnar.otrzymaj_obrazenia(15)
+Gunnar.wypisz()  # Rufus, 105/120 HP
+Gunnar.wylecz(2)
+Gunnar.wypisz()  # Rufus, 108/120 HP
+Gunnar.wylecz(7)
+Gunnar.wypisz()  # Rufus, 120/120 HP
+Gunnar.otrzymaj_obrazenia(150)
+Gunnar.wypisz()  # Rufus, 0/120 HP / Rufus, nie żyje
+
+p = Postac("Worek treningowy", 100)
+while p.czy_zyje():
+    p.otrzymaj_obrazenia(7)
+    p.wypisz()
 
 print(f'____' * 25, "  klaca produkt")
 
@@ -479,3 +479,60 @@ banan = Produkt2("Banan",1)
 cytryna = Produkt2("cytryna",3)
 banan.wyliczenie()
 cytryna.wyliczenie()
+
+
+"""1. (Pominięte zadanie na zajęciach)
+Zaimplementuj klasę ElectricCar odwzorowującą zachowanie samochodu elektrycznego. Klasa powinna umożliwiać pokonanie
+zadanego dystansu, który nie może przekroczyć maksymalnego zasięgu zdefiniowanego dla samochodu. Samochód powinien
+mieć także możliwość naładowania baterii.
+>>> car = ElectricCar(100)
+>>> car.drive(70)
+70
+>>> car.drive(50)
+30
+>>> car.drive(50)
+0
+>>> car.charge()
+>>> car.drive(50)
+50
+
+
+2.
+	a. Do klasy Postac (z zajęć) dodaj atrybut 'atak' (będący liczbą) ustawiany w konstruktorze oraz metodę daj_atak(), która zwróci wartość ataku Postaci.
+
+	b. Stwórz klasę Przedmiot, który będzie posiadał nazwę i jakiś bonus liczbowy (np. Przedmiot("Kij", 4) => Przedmiot o nazwie "Kij" i bonusie 4) oraz będzie posiadał sensowną reprezentację napisową (metoda __str__()).
+
+	c. Rozszerz klasę Postać o ekwipunek - dodaj metody:
+        - daj_przedmiot(p) - dodaje Przedmiot(zad 2b.) do ekwipunku,
+        - wypisz_ekwipunek - wypisuje wszystkie Przedmioty posiadane przez daną Postać.
+
+	d. W klasie Postać (zad 2a.) zmodyfikuj metodę daj_atak(), żeby zwracała wartość ataku Postaci powiększoną o sumę bonusów z posiadanych w ekwipunku(zad 2c.) Przedmiotów(zad 2b.).
+
+3. Zmoyfikuj klasę Ulamek (z zajęć) tak, aby:
+    - dodawanie i mnożenie można było wykonać nie tylko z innym Ulamkiem, ale też z intem, niezależnie po której stronie działania się znajdzie (tj. powinno działać zarówno `x * 5` jak i `5 * x`)
+    - możliwa była zmiana znaku Ulamka (metoda __neg__())
+    - możliwe było wykorzystanie operatorów logicznych: <, <=, >, >=, ==, != działających dla porówniań ułamka z ułamkiem, ułamka z intem i inta z ułamkiem.
+    - (*) po każdym działaniu na Ulamku był on w postaci nieskracalnej (tzn. 1/4 + 1/4 powinno dać w wyniku ułamek 1/2 a nie 2/4)
+
+4. Wyobraźmy sobie robota, który może poruszać się naprzód i obracać w lewo lub prawo o 90 stopni.
+        Napisz klasę Robot, która będzie przechowywała informację o położeniu robota na płaszczyźnie (2 liczby całkowite) oraz
+        kierumku w jakim jest zwrócony (N - północ, S - południe, E - wschód, W - zachód).
+        Klasa powinna udostępniać metody:
+                - wypisz() - wypisuje położenie i zwrot robota,
+                - lewo() - zmienia kierunek, w którym zwrócony jest Robot o 90 stopni w kierunku przeciwnym do ruchu wskazówek zegara (np. N zamieniamy na W),
+                - prawo() - zmienia kierunek, w którym zwrócony jest Robot o 90 stopni w kierunku zgodnym z ruchem wskazówek zegara (np. N zamieniamy na E),
+                - naprzod() - przemieszcza robota krok w kierunku, w którym obecnie jest zwrócony (przykładowo krok na wschód powoduje zmianę współrzędnych z (x, y) na (x + 1, y)),
+                - wykonaj(ciag_instrukcji), gdzie ciąg instrukcji to napis złożony z liter N, P, L oznaczających odpowiednio: Naprzód, Prawo, Lewo (tzn. instkcja N odpowiada jednemu wywołaniu metody naprzod(), P - prawo(), L - lewo()).
+                        Wywołanie metody wykonaj() powinno przemieścić robota zgodnie z przekazanymi instrukcjami.
+                        Przykład:
+                        - początkowe położenie robota: (0, 0), zwrot: N,
+                        - ciąg instrukcji: NNPNLNPP,
+                        - końcowe położenie robota: (1, 3), zwrot: S.
+
+5. (*) Napisz klasę Zolw, która będzie przechowywała informację o położeniu żółwia na płaszczyźnie (2 liczby _rzeczywiste_) oraz kierunku wyrażonym w stopniach, w którym jest zwrócony.
+        Zolw powinien udostępniać metody:
+                - wypisz() - wypisuje położenie i zwrot żólwia,
+                - lewo(n) - obraca żółwia o n stopni w lewo,
+                - prawo(n) - obraca żółwia o n stopni w prawo,
+                - naprzod(n) - przemieszcza żółwia o n jednostek w kierunku, w którym obecnie jest zwrócony.
+        Hint do zadania: `import math` i trygonometria. ;)"""

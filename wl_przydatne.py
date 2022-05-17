@@ -19,18 +19,38 @@
 # filter - dostaje funkcję i listę aplikuje tę funkcę do każdego elemeentu listy jeżeli funkcje zwróci true
 # lambda - funkcja anonimowa - pozwala stworzyć funkcjenie przypisując jej nazwy
 
-napis = "Ala ma kota"
-wystapienia = {litera: napis.count(litera) for litera in napis}
-
+# napis = "Ala ma kota"
+# wystapienia = {litera: napis.count(litera) for litera in napis}
+#
 # napis = "Ala ma kota"
 # wystapienie = {}
-# for litera in napis.lower():
-#     if litera in wystapienie:
-#         wystapienie[litera] += 1
+# for lite in napis.lower():
+#     if lite not in wystapienie:
+#         wystapienie[lite] = 1
 #     else:
-#         wystapienie[litera] += 1
+#         wystapienie[lite] += 1
 #
-print(wystapienie)
+# print(wystapienie)
 
 
+# temperatura = [10,15,17,-1,-5,0,2]
+# for temperatura in enumerate(temperatura):
+#     print(f'Index: {temperatura[0]}, Wartość: {temperatura[1]}')
+#
+# slowo = "Ala ma kota"
+# napis = slowo.split()
+# print(napis)
+#
+# aaa = ['Ala', 'ma', 'kota']
+# hhh = "z ".join(aaa)
+# print(slowo.count('a'))
+#
+# napis = "Ala ma kota"
+# wystapienia = {litera: napis.count(litera) for litera in napis}
+# print(wystapienia)
 
+
+lista = [1, 4, 25, 49, 64, 81, 144, 625, 10000]
+
+nowa = [liczba ** 2 for liczba in lista if liczba % 2 == 0]
+print(nowa)

@@ -3,10 +3,7 @@ import math
 print("_"*65, "Zadanie 1")
 """Zadanie 3.1 Funkcje liczbowe
 Stwórz następujące funkcje. Niech każda z nich przyjmuje w argument do przeliczenia i
-zwraca przeliczoną wartość.
-,
-ą
-wynik."""
+zwraca przeliczoną wartość"""
 
 """1. stopy_na_metry  - przelicza odległość wyrażoną w stopach na metry,"""
 def przelicz(stopa:float):
@@ -93,7 +90,7 @@ pole_trojkonta(4,5,6)
 
 def kilometry_na_mile(kilometry: float):
     odleglosc = round(kilometry*0.621,5)
-    print(f'Podana odległośc w kilometrach odpowiada odległości w milach, równej: {odleglosc} mili')
+    print(f'Podana odległość w kilometrach odpowiada odległości w milach, równej: {odleglosc} mili')
 
 kilometry_na_mile(1)
 
@@ -101,7 +98,7 @@ kilometry_na_mile(1)
 """8. mile_na_kilometry  - przelicza odległość wyrażoną w milach na kilometry"""
 def mile_na_kilometry(mile: float):
     odleglosc = round(mile/0.621,3)
-    print(f'Podana odległośc w milach odpowiada odległości w kilometrach, równej: {odleglosc} km')
+    print(f'Podana odległość w milach odpowiada odległości w kilometrach, równej: {odleglosc} km')
 
 mile_na_kilometry(1)
 
@@ -114,20 +111,20 @@ Wersja B (trudniejsza) Jeżeli użytkownik poda luty - zapytaj go o rok. Na tej 
 policz czy w tym roku luty był przestępny czy nie.
 """
 
-nazwa_miesiaca = input("podaj nazwę miesiąca:")
-if nazwa_miesiaca == "Luty":
-    rok = int(input("Podaj rok, który cię interesuje"))
-    if rok %4 == 0:
-        if rok%100 == 0 and rok %400 != 0:
-            print(f'{nazwa_miesiaca} ma 28 dni')
-        else:
-            print(f'{nazwa_miesiaca} ma 29 dni')
-    else:
-        print(f'{nazwa_miesiaca} ma 28 dni')
-elif nazwa_miesiaca == "Styczeń" or nazwa_miesiaca == "Marzec" or nazwa_miesiaca == "Maj" or nazwa_miesiaca == "Liepiec" or nazwa_miesiaca == "Sierpień" or nazwa_miesiaca == "Październik" or nazwa_miesiaca == "Grudzień":
-    print(f'{nazwa_miesiaca} ma 31 dni')
-elif nazwa_miesiaca == "Kwiecień" or nazwa_miesiaca == "Czerwiec" or nazwa_miesiaca == "Wrzesień" or nazwa_miesiaca == "Listopad":
-    print(f'{nazwa_miesiaca} ma 30 dni')
+# nazwa_miesiaca = input("podaj nazwę miesiąca:")
+# if nazwa_miesiaca == "Luty":
+#     rok = int(input("Podaj rok, który cię interesuje"))
+#     if rok %4 == 0:
+#         if rok%100 == 0 and rok %400 != 0:
+#             print(f'{nazwa_miesiaca} ma 28 dni')
+#         else:
+#             print(f'{nazwa_miesiaca} ma 29 dni')
+#     else:
+#         print(f'{nazwa_miesiaca} ma 28 dni')
+# elif nazwa_miesiaca == "Styczeń" or nazwa_miesiaca == "Marzec" or nazwa_miesiaca == "Maj" or nazwa_miesiaca == "Liepiec" or nazwa_miesiaca == "Sierpień" or nazwa_miesiaca == "Październik" or nazwa_miesiaca == "Grudzień":
+#     print(f'{nazwa_miesiaca} ma 31 dni')
+# elif nazwa_miesiaca == "Kwiecień" or nazwa_miesiaca == "Czerwiec" or nazwa_miesiaca == "Wrzesień" or nazwa_miesiaca == "Listopad":
+#     print(f'{nazwa_miesiaca} ma 30 dni')
 
 
 
@@ -136,12 +133,36 @@ print("_"*65, "Zadanie 3")
 Stwórz następujące funkcje. Każda z nich będzie przyjmowała listę liczb i na tej podstawie
 wykona odpowiednie operacje i zwróci odpowiedni wynik
 lista_liczb = [10, 20, 30, 40]
-wynik = suma(lista_liczb)
+wynik = suma(lista_liczb)"""
+
+
+"""1 suma"""
+
+def suma(liczba1: float, liczba2: float, liczba3: float, liczba4:float):
+    wynik = liczba1 + liczba2 + liczba3 + liczba4
+    print(f'Suma podanych liczb to: {wynik}')
+suma(1,2,3,4.7)
+
+
+"""2. Średnia"""
+def srednia(liczba1: float, liczba2: float, liczba3: float, liczba4:float):
+    wynik = (liczba1 + liczba2 + liczba3+ liczba4)/4
+    print(f'Średnia podanych liczb to: {wynik}')
+srednia(1,2,3,4)
+
+"""3.max"""
+lista = [10,20,30,40]
+for a in lista:
+   for b in lista:
+    wynik = a-b
+    print(wynik)
 
 
 
 
-"""
+
+
+
 print("_"*65, "Zadanie 4")
 """
 Zadanie 3.4 | Zliczanie znaków
@@ -154,12 +175,22 @@ policz_znaki('ala ma <kota> a kot ma ale')
 policz_znaki('ala ma kota a (kot) ma ale', '(', ')')
 3
 """
-print("_"*65, "Zadanie 5")
-print("_"*65, "Zadanie 6")
-print("_"*65, "Zadanie 7")
-print("_"*65, "Zadanie 8")
-print("_"*65, "Zadanie 9")
-print("_"*65, "Zadanie 10")
-print("_"*65, "Zadanie 11")
-print("_"*65, "Zadanie 12")
+
+# tekst = input('Podaj dowlony tekst. Zliczona zostanie ilość znaków pomiędzy <>')
+# wynik = tekst.index('>') - tekst.index('<')-1
+# print(f'Długość tekstu wynosi:{len(tekst)}. Ilość znaków w nawiasie "<>" to: {wynik} (Spacje są uzględniane)')
+#
+# print("_"*65, "Zadanie 5")
+
+
+zakres= [10,20,30,40]
+ilosc = 0
+for a in zakres:
+    for b in zakres:
+        if a > b:
+            ilosc =+1
+print(ilosc)
+
+
+
 

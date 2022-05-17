@@ -30,7 +30,7 @@ dla liczb od 0 do 10 w postaci tabelki.
 #     print(f'{a:5}', end=' ')
 # print()
 # print()
-#
+
 # for x in range(0, 11):
 #     print(f'{x:<5}',end=" ")
 #     for y in range(0,11):
@@ -39,15 +39,15 @@ dla liczb od 0 do 10 w postaci tabelki.
 
 
 # print("_"*65, "nowy temat enumeration")
-#
-# """ enumeracja zaczyna od 0 i wyświetla wartość """
+
+""" enumeracja zaczyna od 0 i wyświetla wartość """
 # temperatura = [10,15,17,-1,-5,0,2]
 # for temperatura in enumerate(temperatura):
 #     print(f'index: {temperatura[0]}, wartość: {temperatura[1]}')
 
 """mozna przypisywać wartości bezpośrednio do tupli lub listy. przykład poniżej.
  Liczba zmiennych i liczba elementów musi być taka sama inaczej dostajemy błąd"""
-# imie,nazwisko,wiek= ('Wojciech','Lewinski', '45')
+# imie,nazwisko,wiek = ('Wojciech','Lewinski', '35')
 # print(imie)
 # print(nazwisko)
 # print(wiek)
@@ -61,7 +61,7 @@ dla liczb od 0 do 10 w postaci tabelki.
 print("_"*65, "nowy temat operatory dostępu")
 
 # """oerator dostępu"""
-# napis= 'Ala ma kota kot ma kompiolator'
+napis= 'Ala ma kota kot ma kompiolator'
 # print(napis)
 # print(napis[0:10])
 # print(napis[0:10:2])#co drugi znak od 0 do 10
@@ -79,7 +79,7 @@ print("_"*65, "nowy temat operatory dostępu")
 #
 # print("_"*65, "nowe zadanie")
 # """scalanie wartości ale nie kontatenacja """
-# po_scaleniu = '<....>'. join(['a','b','c']) # używasz łćzanika w naszym przypadku ..., następnie join + kolekcj. Kolekcjka może być lista lub tupla
+# po_scaleniu = '<....>'. join(['a','b','c']) # używasz łączanika w naszym przypadku ..., następnie join + kolekcj. Kolekcjka może być lista lub tupla
 # print(po_scaleniu)
 #
 # po_scaleniu = '<....>'.join('ala ma kota') # możesz dodać tuplę zawierającą zapis
@@ -259,7 +259,7 @@ print("_" * 65, "zbiory")
 
 # zbior = {10,10,10,20,30,52,10,85}
 # i = 1
-# while i < 10:
+# for i in range(1,10):
 #     a = input('podaj liczbę')
 #     zbior.add(a)
 #     i += 1
@@ -364,10 +364,10 @@ robimy iloczyn teoriomnogosciowy na dwoch zbiorach, zeby pokazac ktore wprowadzo
 # literki = {litera for litera in "Ala ma kota"}
 # print(literki)
 # print(type(literki))
-
-
-print("_" * 65, "dict comprehension")
-
+#
+#
+# print("_" * 65, "dict comprehension")
+#
 # napis = "Ala ma kota"
 # wystapienia = {litera: napis.count(litera) for litera in napis}
 # print(wystapienia)
@@ -383,8 +383,9 @@ print("_" * 65, "dict comprehension")
 
 print("_" * 65, "generator expression")
 # #
-# liczby = (liczba for liczba in range(1,11))
-# print(liczby)
+liczby = (liczba for liczba in range(1,11))
+
+print(liczby)
 # for x in liczby:
 #     print(x)
 

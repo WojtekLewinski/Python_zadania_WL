@@ -202,3 +202,6 @@ print("_" * 65, "LISTA")
 # math.floor(2.5) #zaokrągla w dół
 # math.ceil(2.5) #zaokrągla w górę
 # math.sqrt(4)
+
+
+

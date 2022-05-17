@@ -25,24 +25,24 @@ print("_" * 65, "przykłady")
 # srednia_z_listy({1,2,3})# mozna podać zbiór
 #
 print("_" * 65, "funkcja moze coś zwrócić _ return")
-#
-# def srednia_z_wielu(liczby):
-#     wynik = sum(liczby)/len(liczby)
-#     return wynik  #return powoduje przerywanie funkcji i nic co zostanie wpisane potem nie zostanie wykonane ani wyświetlone
-#
-# policzona_srednia = srednia_z_wielu([10,20,30])
-# print(policzona_srednia)
-#
-# # return moze zwrócić więcej wartości jako tuplę
-# def dodawanie_mnożenia(liczba_1, liczba_2):
-#     return (liczba_1+liczba_2, liczba_1*liczba_2)
-# wynik = dodawanie_mnożenia(2.5,3)
-# print(wynik)
-#
-# # można rozkapkować tuplę na klucz i wartość
-# wynik_dodawania,wynik_mnozenia = dodawanie_mnożenia(4,5)
-# print(wynik_mnozenia)
-# print(wynik_dodawania)
+
+def srednia_z_wielu(liczby):
+    wynik = sum(liczby)/len(liczby)
+    return wynik  #return powoduje przerywanie funkcji i nic co zostanie wpisane potem nie zostanie wykonane ani wyświetlone
+
+policzona_srednia = srednia_z_wielu([10,20,30])
+print(policzona_srednia)
+
+# return moze zwrócić więcej wartości jako tuplę
+def dodawanie_mnożenia(liczba_1, liczba_2):
+    return (liczba_1+liczba_2, liczba_1*liczba_2)
+wynik = dodawanie_mnożenia(2.5,3)
+print(wynik)
+
+# można rozkapkować tuplę na klucz i wartość
+wynik_dodawania,wynik_mnozenia = dodawanie_mnożenia(4,5)
+print(wynik_mnozenia)
+print(wynik_dodawania)
 #
 #
 print("_" * 65, " dokumentacja, jak dokumentować swoje funkcje ")
