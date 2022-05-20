@@ -56,4 +56,7 @@
 # print(nowa)
 
 
+a = ["Adrian", "Piotrek", "Ewa", "Bonifacy"]
+for i in range(4):
+    print(i,a[i])
 
