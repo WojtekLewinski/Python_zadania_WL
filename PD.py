@@ -7,6 +7,8 @@ class Postac:
         self.ekwipunek = []
 
 
+
+
     def wypisz(self):
         if self.czy_zyje():
             print(f"{self.imie}, {self.zdrowie}/{self.max_zdrowie} HP")
@@ -40,26 +42,29 @@ class Postac:
     def czy_zyje(self):
         return self.zdrowie > 0
 
-    def daj_atak(self,pkt_atak):
-        if pkt_atak > 0:
-            self.atak += pkt_atak
-        print(f'{self.imie} zadał {self.atak}')
-
     def przedmiot(self,bron, pkt_broni):
         self.bron = bron
         self.pkt_broni = pkt_broni
+        self.atak += pkt_broni
         self.ekwipunek.append(bron)
         print(f'{self.imie} otrzymał {self.bron} z bonusem uderzenia {self.pkt_broni}')
+
 
     def daj_przedmiot(self, nowa_bron, pkt_nowej_broni):
         if nowa_bron.capitalize not in self.ekwipunek:
             self.ekwipunek.append(nowa_bron)
+            self.atak += pkt_nowej_broni
             print(f'{self.imie} w ekwipunku posiada: {self.ekwipunek}')
         else:
             print(f'{self.imie} w ekwipunku posiada: {self.ekwipunek}')
 
 
-
+    def daj_atak(self,pkt_atak):
+        if pkt_atak > 0:
+            self.atak += pkt_atak
+            print(f'{self.imie} zadał {self.atak} obrażeń')
+        else:
+            print(f'{self.imie} nie zadał obrażeń')
 
 
 
@@ -77,13 +82,15 @@ rufus.otrzymaj_obrazenia(150)
 rufus.wypisz() # Rufus, 0/120 HP / Rufus, nie żyje
 rufus.wylecz(30)
 rufus.wypisz() # Rufus, 0/120 HP / Rufus, nie żyje
+rufus.daj_atak(0)
+rufus.przedmiot("Młot",3)
+rufus.daj_przedmiot("Miecz",2)
 rufus.daj_atak(10)
 rufus.daj_atak(10)
-rufus.przedmiot("Miotła",3)
-rufus.daj_przedmiot("Koza",2)
+rufus.daj_przedmiot("Miecz",2)
 rufus.daj_przedmiot("Myszka", 9)
-rufus.daj_przedmiot("Programista nudysta",10)
-rufus.ekwipunek
+rufus.daj_przedmiot("Programista ",10)
+
 rufus.wypisz() # Rufus, 0/120 HP / Rufus, nie żyje
 
 p = Postac("Worek treningowy", 100)

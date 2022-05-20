@@ -50,7 +50,10 @@
 # print(wystapienia)
 
 
-lista = [1, 4, 25, 49, 64, 81, 144, 625, 10000]
+# lista = [1, 4, 25, 49, 64, 81, 144, 625, 10000]
+#
+# nowa = [liczba ** 2 for liczba in lista if liczba % 2 == 0]
+# print(nowa)
 
-nowa = [liczba ** 2 for liczba in lista if liczba % 2 == 0]
-print(nowa)
+
+

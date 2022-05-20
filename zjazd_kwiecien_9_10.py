@@ -244,14 +244,14 @@ litera => liczba wystąpień (int)
 Trzeba sprawdzić czy dana litera wystepuje w slowniku!
 """
 
-# tekst = input('podaj dowolny tekst')
-# wystapienie = {}
-# for litera in tekst.lower():
-#     if litera not in wystapienie:
-#         wystapienie[litera] = 1
-#     else:
-#         wystapienie[litera]+=1
-# print(wystapienie)
+tekst = input('podaj dowolny tekst')
+wystapienie = {}
+for litera in tekst.lower():
+    if litera not in wystapienie:
+        wystapienie[litera] = 1
+    else:
+        wystapienie[litera]+=1
+print(wystapienie)
 
 print("_" * 65, "zbiory")
 
