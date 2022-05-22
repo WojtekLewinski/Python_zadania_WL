@@ -196,8 +196,9 @@ print("_" * 65, "LISTA")
 # # jeżeli w zdaniu jest kropka od nowego zdania nie zmienia na wwielkie
 # print(napis.title())# każde słowo z dużej litery
 # print(napis.split())# kroi zdanie na sekcje i możemy podać jaki znak będzie separatorem
-#
-#
+# lstrip - usuwabiałe znaki z lewej strony napisu
+#rstrip - usuwa białę znaki z prawej strony napisu
+# strip  usuwa białe znakiz obu stron
 # round(2.5) #zaokrągla na zasadach ogólnych
 # math.floor(2.5) #zaokrągla w dół
 # math.ceil(2.5) #zaokrągla w górę
