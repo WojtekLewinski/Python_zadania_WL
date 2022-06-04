@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Autorów</title>
+</head>
+<body>
+    <h1>Lista Autorów</h1>
+    <ul>
+        {% for p in widok %}
+        <li><a href="#">{{/a> Autor - {{ p.imie }} {{ p.nazwisko }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
