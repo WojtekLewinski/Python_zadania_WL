@@ -324,13 +324,66 @@ topCount = 10
 #     lista = json.load(plik)
 # print("Aktualna cena złota:", lista[0]['cena'])
 
-h = {"User-Agent": "Chrome"}
-zapytanie = Request("https://api.chucknorris.io/jokes/categories", headers=h)
-with urlopen(zapytanie) as plik:
-    kategorie = json.load(plik)
-    print(f'kategorie to:{" ".join(kategorie)}')
-a = input("Wpisz  kategorię:")
-zapytanie = Request(f'https://api.chucknorris.io/jokes/random?category={a}', headers=h)
-with urlopen(zapytanie) as plik:
-    zart = json.load(plik)
-print(zart["value"])
+# h = {"User-Agent": "Chrome"}
+# zapytanie = Request("https://api.chucknorris.io/jokes/categories", headers=h)
+# with urlopen(zapytanie) as plik:
+#     kategorie = json.load(plik)
+#     print(f'kategorie to:{" ".join(kategorie)}')
+# a = input("Wpisz  kategorię:")
+# zapytanie = Request(f'https://api.chucknorris.io/jokes/random?category={a}', headers=h)
+# with urlopen(zapytanie) as plik:
+#     zart = json.load(plik)
+# print(zart["value"])
+
+
+print('_'*40,'moduł tkinter')
+# def fun():
+#     print(("Przycisk został naciśnięty."))
+#     tresc = pole_tekstowe.get()
+#     print(f'Treść pola: {tresc}')
+#     tekst.configure(text = tresc)
+#
+# import tkinter as tk
+# root = tk.Tk()
+# przycisk = tk.Button(master=root, text="Click me!", command=fun)
+# przycisk.grid(row = 0, column =0)
+#
+# pole_tekstowe = tk.Entry(master=root)
+# pole_tekstowe.grid(row = 1, column = 1)
+#
+# tekst = tk.Label(master=root, text = "To jest Label")
+# tekst.grid(row=0, column =1)
+#
+# root.mainloop()
+
+import tkinter as pole
+
+root = pole.Tk() #od tego zaczynamy i to zawsze jest w takiej postaci
+root.title("Nowa nazwa")
+def oblicz():
+    tresc1 = float(dystans.get())
+    tresc2 = float(spalanie.get())
+    tresc3 = float(cena.get())
+    print(f'Treść pola: {tresc1*tresc2*tresc3/100}')
+
+
+
+przycisk = pole.Button(master=root, text="Wylicz!", command=oblicz)
+przycisk.grid(row = 3, column = 0)
+dystans = pole.Entry(master=root)
+dystans.grid(row = 0, column = 1)
+spalanie = pole.Entry(master=root)
+spalanie.grid(row = 1, column = 1)
+cena = pole.Entry(master=root)
+cena.grid(row = 2, column = 1)
+
+tekst = pole.Label(master=root, text = "Dystans")
+tekst.grid(row=0, column =0)
+tekst2 = pole.Label(master=root, text = "Spalanie")
+tekst2.grid(row=1, column =0)
+tekst3 = pole.Label(master=root, text = "Cena Paliwa")
+tekst3.grid(row=2, column =0)
+
+root.mainloop()
+
+sticky = pole.E
